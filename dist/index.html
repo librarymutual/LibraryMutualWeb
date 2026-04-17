@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1f1812">
+
+  <title>thelibraryai.org — An invitation from Arapahoe Libraries</title>
+  <meta name="description" content="A preview and invitation. Arapahoe Libraries, co-convened with Bob Beth, extends this invitation to library leaders worldwide.">
+
+  <!-- Brief 1.2: block search engines on the preview site -->
+  <meta name="robots" content="noindex, nofollow, noarchive, noimageindex">
+  <meta name="googlebot" content="noindex, nofollow">
+
+  <!-- Security hardening: limit referrer leakage, disable unused sensors,
+       and constrain resources the page is permitted to load. -->
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), interest-cohort=(), browsing-topics=(), payment=(), usb=(), magnetometer=(), accelerometer=(), gyroscope=()">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://formspree.io; form-action 'self' https://formspree.io; frame-ancestors 'none'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests">
+
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/favicon.svg">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="thelibraryai.org">
+  <meta property="og:url" content="https://thelibraryai.org/">
+  <meta property="og:title" content="An invitation from Arapahoe Libraries">
+  <meta property="og:description" content="Public libraries are the indispensable civilizing institution for the age of artificial intelligence. An invitation extended to library leaders worldwide.">
+  <meta property="og:image" content="https://thelibraryai.org/images/hero-1.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="800">
+  <meta property="og:image:alt" content="Interior of a great library — civilizing institutions for the age of AI.">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="An invitation from Arapahoe Libraries">
+  <meta name="twitter:description" content="Public libraries are the indispensable civilizing institution for the age of artificial intelligence.">
+  <meta name="twitter:image" content="https://thelibraryai.org/images/hero-1.jpg">
+  <meta name="twitter:image:alt" content="Interior of a great library — civilizing institutions for the age of AI.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+  <!-- LCP: hero-1 is the first visible image. Remaining hero slides are preloaded
+       at low priority so the Ken-Burns swap has its assets cached without
+       competing with the initial paint. -->
+  <link rel="preload" as="image" href="/images/hero-1.avif" type="image/avif">
+  <link rel="preload" as="image" href="/images/hero-2.avif" type="image/avif" fetchpriority="low">
+  <link rel="preload" as="image" href="/images/hero-3.avif" type="image/avif" fetchpriority="low">
+  <link rel="preload" as="image" href="/images/hero-4.avif" type="image/avif" fetchpriority="low">
+  <link rel="preload" as="image" href="/images/hero-5.avif" type="image/avif" fetchpriority="low">
+  <script type="module" crossorigin src="/assets/index-Di6WxM7u.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-C7Hhv9cp.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- ── Nav ── -->
+  <nav class="site-nav" aria-label="Primary">
+    <a href="#top" class="nav-wordmark">thelibrary<em>ai</em>.org</a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="primaryNavLinks" aria-label="Toggle navigation menu">
+      <span class="nav-toggle-bar" aria-hidden="true"></span>
+    </button>
+    <ul id="primaryNavLinks" class="nav-links">
+      <li><a href="#invitation">The Invitation</a></li>
+      <li><a href="#building">What We Are Building</a></li>
+      <li><a href="#the-space">The Space</a></li>
+      <li><a href="#briefing" class="nav-cta">Request the Briefing</a></li>
+    </ul>
+  </nav>
+
+  <main id="main">
+    <a id="top" aria-hidden="true"></a>
+
+    <!-- ── 3.1 Hero Slider One: Libraries of the World ── -->
+    <!--
+      IMAGERY TODO (brief 3.1.1, 6.3): replace interim images with the
+      intended sequence — Trinity College Dublin Long Room; Stockholm Public
+      Library rotunda; Beinecke Rare Book Library; Boston Public Library
+      McKim Building; State Library Victoria La Trobe Reading Room;
+      National Library of Australia; closing on The Space by Arapahoe Libraries.
+    -->
+    <section class="hero" id="heroOne" aria-label="Libraries of the world">
+      <div class="hero-slides" aria-hidden="true">
+        <div class="hero-slide active" data-caption="Interim image — Bibliotheca Alexandrina">
+          <picture>
+            <source srcset="/images/hero-1.avif" type="image/avif">
+            <source srcset="/images/hero-1.webp" type="image/webp">
+            <img src="/images/hero-1.jpg" alt="" width="1200" height="800" loading="eager" fetchpriority="high" decoding="async">
+          </picture>
+        </div>
+        <div class="hero-slide" data-caption="State Library Victoria, Melbourne">
+          <picture>
+            <source srcset="/images/hero-2.avif" type="image/avif">
+            <source srcset="/images/hero-2.webp" type="image/webp">
+            <img src="/images/hero-2.jpg" alt="" width="1600" height="1200" loading="lazy" decoding="async">
+          </picture>
+        </div>
+        <div class="hero-slide" data-caption="Interim image — Mortlock Chamber, Adelaide">
+          <picture>
+            <source srcset="/images/hero-3.avif" type="image/avif">
+            <source srcset="/images/hero-3.webp" type="image/webp">
+            <img src="/images/hero-3.jpg" alt="" width="1200" height="675" loading="lazy" decoding="async">
+          </picture>
+        </div>
+        <div class="hero-slide" data-caption="Interim image — Bibliothèque de l'Hôtel de Ville, Paris">
+          <picture>
+            <source srcset="/images/hero-4.avif" type="image/avif">
+            <source srcset="/images/hero-4.webp" type="image/webp">
+            <img src="/images/hero-4.jpg" alt="" width="1360" height="1010" loading="lazy" decoding="async">
+          </picture>
+        </div>
+        <div class="hero-slide" data-caption="Interim image — Bibliothèque de la Sorbonne, Paris">
+          <picture>
+            <source srcset="/images/hero-5.avif" type="image/avif">
+            <source srcset="/images/hero-5.webp" type="image/webp">
+            <img src="/images/hero-5.jpg" alt="" width="1515" height="1010" loading="lazy" decoding="async">
+          </picture>
+        </div>
+      </div>
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="hero-content">
+        <p class="hero-tagline">
+          For twenty-five centuries, libraries have civilized every new knowledge technology.
+          <em>The age of AI is no different.</em>
+        </p>
+      </div>
+      <div class="hero-indicators"
+           id="heroOneIndicators"
+           data-dot-class="indicator"
+           data-fill-class="indicator-fill"
+           role="tablist"
+           aria-label="Hero slides"></div>
+      <div class="hero-caption" id="heroOneCaption" aria-live="polite"></div>
+    </section>
+
+    <!-- ── 3.1b The Continuum ── -->
+    <section class="prose narrative" id="continuum" aria-labelledby="continuumHeading">
+      <div class="narrative-body">
+        <h2 id="continuumHeading" class="section-heading"><span class="heading-numeral" aria-hidden="true">I</span>The Continuum</h2>
+        <p>Every transformative knowledge technology has required a civilizing institution to make it trustworthy, accessible, and governed in the public interest.</p>
+        <p>When writing emerged, temples and scriptoria preserved it. When the printing press arrived, libraries ensured that the books it produced were collected, catalogued, and made available beyond the few who could afford to buy them. When the internet arrived, public libraries were among the first institutions to provide free access &mdash; terminals, training, and digital literacy &mdash; to communities that would otherwise have been excluded entirely.</p>
+        <p>The pattern is consistent across twenty-five centuries: the technology arrives first; the civilizing institution follows; and the quality of the civilization that results depends on how well that institution does its work.</p>
+        <p>Artificial intelligence is the next knowledge technology. It is arguably the most powerful one ever created &mdash; a technology that does not merely store or transmit knowledge but transforms it, recombines it, and generates new expressions of it at planetary scale. The civilizing institution for this technology has not yet stepped forward. This invitation asks whether it already exists &mdash; and has for centuries.</p>
+      </div>
+    </section>
+
+    <!-- ── 3.1c The Current Trajectory ── -->
+    <section class="prose narrative" id="trajectory" aria-labelledby="trajectoryHeading">
+      <div class="narrative-body narrative-body--with-figure">
+        <h2 id="trajectoryHeading" class="section-heading"><span class="heading-numeral" aria-hidden="true">II</span>The Current Trajectory</h2>
+        <div class="trajectory-layout">
+          <figure class="trajectory-figure">
+            <picture>
+              <source srcset="/images/datacenter.avif" type="image/avif">
+              <source srcset="/images/datacenter.webp" type="image/webp">
+              <img src="/images/datacenter.jpg"
+                   alt="A narrow corridor in a modern datacenter, lined floor to ceiling with server racks glowing amber and blue."
+                   width="408"
+                   height="728"
+                   loading="lazy"
+                   decoding="async">
+            </picture>
+            <figcaption>The current AI infrastructure buildout.</figcaption>
+          </figure>
+          <div class="trajectory-copy">
+            <p>The way large language models are being built today follows a specific pattern. It is not the only possible pattern. It is worth naming clearly.</p>
+            <p>The world's accumulated knowledge &mdash; books, articles, research, correspondence, creative work, community records &mdash; is scraped at planetary scale, without consent, without attribution, and often without compensation. It is ingested into statistical models that strip away provenance: who created it, who verified it, under what terms it was offered. The resulting systems are powerful, but they cannot tell you where their answers came from, whether the sources were credible, or whether the people whose knowledge made the system possible were ever acknowledged, let alone compensated.</p>
+            <p>This approach is also extraordinarily expensive. Training runs are projected to consume ten gigawatts of power by the end of the decade. The energy, the water, the trillion-dollar datacenter buildout &mdash; these are not signs of efficiency. They are symptoms of a substrate problem. The compute is compensation for the poverty of the knowledge it is built on. When the training data carries no structure, no provenance, and no credibility signal, the model must burn enormous resources to statistically recover what a well-structured knowledge substrate would simply declare.</p>
+            <p>Libraries will recognize this pattern. It is the enclosure of the commons &mdash; applied not to land but to knowledge itself. And it is precisely the pattern that libraries have stood against for centuries.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 3.1d The Trim Tab ── -->
+    <section class="prose narrative" id="trim-tab" aria-labelledby="trimTabHeading">
+      <div class="narrative-body">
+        <h2 id="trimTabHeading" class="section-heading"><span class="heading-numeral" aria-hidden="true">III</span>The Trim Tab</h2>
+        <figure class="narrative-figure-block">
+          <picture>
+            <source srcset="/images/biosphere.avif" type="image/avif">
+            <source srcset="/images/biosphere.webp" type="image/webp">
+            <img src="/images/biosphere.jpg" alt="Buckminster Fuller's geodesic dome at Expo 67, Montreal &mdash; now the Montr&eacute;al Biosph&egrave;re." width="1200" height="675" loading="lazy" decoding="async">
+          </picture>
+          <figcaption>Buckminster Fuller&rsquo;s geodesic dome, Expo 67, Montreal &mdash; now the Montr&eacute;al Biosph&egrave;re.</figcaption>
+        </figure>
+        <p>Buckminster Fuller &mdash; architect, systems thinker, and inventor of the geodesic dome &mdash; used the metaphor of the trim tab to describe how small, precisely positioned interventions can redirect enormous systems. A trim tab is a tiny surface on the trailing edge of a ship's rudder. It takes almost no force to move. But moving it changes the pressure on the rudder, which turns the rudder, which turns the ship. Fuller was so taken with the idea that he had the words &ldquo;Call me Trim Tab&rdquo; engraved on his headstone.</p>
+        <p>Libraries cannot outspend the companies building today's AI. They cannot match the compute. They cannot regulate the industry. But they can do something no other institution on earth can do: they can provide the governed, provenance-rich, credibility-marked knowledge substrate that makes the current brute-force trajectory unnecessary &mdash; at least for the domains where trustworthy knowledge matters most.</p>
+        <p>A library's curated knowledge, structured with provenance and credibility, can provide the high-credibility training data that domain-specific AI models need &mdash; at a fraction of the compute cost of scraping the open web. Research has already demonstrated that small models trained on high-quality curated data can match or exceed models many times larger trained on raw scrapes. The quality of the knowledge substrate determines the efficiency of the training. Libraries hold the highest-quality knowledge substrates in existence.</p>
+        <p>That is the trim tab. Not competing with the current trajectory, but making it irrelevant &mdash; domain by domain, community by community, library by library. A small force, precisely positioned, that redirects the ship.</p>
+      </div>
+    </section>
+
+    <!-- ── 3.2 The Invitation ── -->
+    <section class="prose" id="invitation" aria-labelledby="invitationHeading">
+      <div class="invitation">
+        <div class="invitation-body">
+          <h2 id="invitationHeading" class="section-heading">The Invitation</h2>
+          <p>Arapahoe Libraries, serving Arapahoe County in the southern Denver metropolitan region, extends this invitation to library leaders worldwide. We believe that the arrival of artificial intelligence is not a threat to be managed but a civilizing mission to be claimed &mdash; and that no institution is better positioned to claim it than the public library.</p>
+          <p>This is an invitation &mdash; extended in the conviction that the skills libraries have cultivated over centuries &mdash; curation, stewardship, equitable access, the defense of intellectual freedom &mdash; are precisely the skills this moment demands.</p>
+          <p>The window for building a governed alternative to ungoverned extraction is open now. It will not remain open indefinitely. We extend this invitation in that spirit.</p>
+
+          <ul class="signatories" aria-label="Signatories">
+            <li class="signatory">
+              <img class="signatory-portrait" src="/images/oliver-sanidas.jpg" alt="Portrait of Oliver Sanidas" width="240" height="240" loading="lazy" decoding="async">
+              <p class="signatory-name">Oliver Sanidas</p>
+              <p class="signatory-role">Executive Director, Arapahoe Libraries</p>
+              <p class="signatory-link"><a href="https://www.linkedin.com/in/oliversanidas/" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
+            </li>
+            <li class="signatory">
+              <img class="signatory-portrait" src="/images/anthony-white.jpg" alt="Portrait of Anthony White" width="240" height="240" loading="lazy" decoding="async">
+              <p class="signatory-name">Anthony White</p>
+              <p class="signatory-role">Director of Innovation and Technology, Arapahoe Libraries</p>
+              <p class="signatory-link"><a href="https://www.linkedin.com/in/anthony-white-arapahoe/" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
+            </li>
+            <li class="signatory">
+              <img class="signatory-portrait" src="/images/bob-beth.jpg" alt="Portrait of Bob Beth" width="240" height="240" loading="lazy" decoding="async">
+              <p class="signatory-name">Bob Beth</p>
+              <p class="signatory-role">Strategic Innovations Advisor &amp; Co-Convenor</p>
+              <p class="signatory-link"><a href="https://www.linkedin.com/in/bobbeth/" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Brief 3.2.1: quiet image of a reading/gathering space beside the text.
+             IMAGERY TODO: replace interim image with an authorized Arapahoe reading/gathering shot. -->
+        <div class="invitation-image">
+          <picture>
+            <source srcset="/images/hero-2.avif" type="image/avif">
+            <source srcset="/images/hero-2.webp" type="image/webp">
+            <img src="/images/hero-2.jpg" alt="Interim image of a library reading room — to be replaced with an Arapahoe Libraries gathering space." width="1600" height="1200" loading="lazy" decoding="async">
+          </picture>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 3.3 The Civilizing Claim (pull quote) ── -->
+    <section class="claim" id="claim" aria-labelledby="claimHeading">
+      <blockquote class="claim-quote" id="claimHeading">
+        Public libraries are the indispensable civilizing institution for the age of artificial intelligence.
+      </blockquote>
+      <p class="claim-attribution">
+        After Thomas Jefferson, letter to William Charles Jarvis, 1820 &mdash;
+        &ldquo;No institution is a safer steward of a society's ultimate power than an informed public.&rdquo;
+      </p>
+    </section>
+
+    <!-- ── 3.3b The Assertion — bridge between the Trim Tab and the cards ── -->
+    <section class="rationale" id="rationale" aria-labelledby="rationaleHeading">
+      <div class="rationale-inner">
+        <span class="rationale-eyebrow">The Assertion</span>
+        <h2 id="rationaleHeading" class="section-heading"><span class="heading-numeral" aria-hidden="true">IV</span>Why are public libraries indispensable to the age of AI?</h2>
+        <div class="rationale-body">
+          <p>Not merely relevant. Not simply useful. Indispensable &mdash; in the way that universities were indispensable to the mainframe era, and community workshops were indispensable to the birth of personal computing. Without libraries at the center, democratic and equitable AI is not achievable.</p>
+          <p>Libraries do not merely provide access to information. They cultivate something far more valuable: the civic capacity to use knowledge wisely, critically, and in relationship with others. A search engine delivers results. A library cultivates judgment. That distinction has never mattered more than it does now, when the most powerful information technology in human history is being built, at extraordinary speed, largely without civic infrastructure.</p>
+          <p>Consider what libraries already hold. They hold the trust of their communities &mdash; across every demographic and geography. They hold curatorial expertise &mdash; the judgment to distinguish the credible from the merely available. They hold a commitment to privacy that predates the internet by centuries. They hold a gift ontology of knowledge &mdash; the understanding that a researcher publishes, an author writes, a community elder shares, and the originating act is generosity, an offering into the commons. The mechanisms that follow &mdash; royalties, licensing, attribution &mdash; exist to honor the gift, not to motivate it.</p>
+          <p>And they hold something no technology company, no government agency, and no university can match: a demonstrated ability, across centuries, to outlast the political and economic upheavals that destroy lesser institutions.</p>
+          <p>The civic institution that stewards AI must understand knowledge as gift rather than commodity, must protect individual privacy while demanding institutional transparency, and must carry the trust of the communities it serves. That institution already exists. It has existed for twenty-five centuries. The question is whether it will step forward now &mdash; or leave the terms to be set by others.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 3.3c Bridge image — librarian with patron ── -->
+    <figure class="bridge-figure">
+      <picture>
+        <source srcset="/images/librarian-patron.avif" type="image/avif">
+        <source srcset="/images/librarian-patron.webp" type="image/webp">
+        <img src="/images/librarian-patron.jpg" alt="A librarian assists a patron." width="5781" height="4635" loading="lazy" decoding="async">
+      </picture>
+      <figcaption>New York Public Library. Courtesy Unsplash.</figcaption>
+    </figure>
+
+    <!-- ── 3.4 What We Are Building — Minimum Viable Offering ── -->
+    <section class="offering" id="building" aria-labelledby="buildingHeading">
+      <div class="offering-header">
+        <h2 id="buildingHeading" class="section-heading"><span class="heading-numeral" aria-hidden="true">V</span>What We Are Building</h2>
+      </div>
+
+      <div class="offerings">
+
+        <!-- A — MISOs -->
+        <article class="offering-row" aria-labelledby="offerATitle">
+          <aside class="offering-meta">
+            <span class="offering-letter" aria-hidden="true">A</span>
+          </aside>
+          <div class="offering-body">
+            <h3 class="offering-title" id="offerATitle">The Library as Creator &amp; Attestor of Knowledge Objects</h3>
+            <p class="offering-subtitle">MISOs &mdash; Multidimensional Intelligent Semantic Objects.</p>
+            <p class="offering-lede">A MISO is a new kind of knowledge container, designed for the age of AI. Where a book is a fixed artifact and a web page is an untethered claim, a MISO carries its knowledge together with its provenance &mdash; who created it, who verified it, how confident the verification is, and under what terms it may be used. Each MISO is tamper-proof, sealed with post-quantum cryptography so that its provenance and content cannot be altered &mdash; a property designed to outlast the arrival of quantum computing. MISOs are the structured, credibility-marked substrate on which trustworthy AI can be built.</p>
+            <p>Libraries are uniquely positioned to curate and create them. Consider three examples:</p>
+            <ul>
+              <li>A local climate corpus &mdash; flood histories, farmer oral histories, civic adaptation records &mdash; structured as MISOs and offered to a domain-specific climate AI model. The model answers local questions with verifiable sources and transparent origins.</li>
+              <li>A community health knowledge base &mdash; curated by librarians in partnership with public health authorities &mdash; structured as MISOs so that a health AI assistant at the library cites verified sources rather than scraping the open web.</li>
+              <li>A local governance archive &mdash; council minutes, planning records, community consultations &mdash; structured as MISOs so that civic participation tools can draw on verified primary sources rather than news summaries of them.</li>
+            </ul>
+            <p>But libraries are not the only creators. Every individual can create MISOs &mdash; a researcher structuring findings, a farmer documenting generations of land knowledge, a community elder preserving an oral history, a student assembling a capstone project with full source attribution. The MISO Commons is not a top-down archive. It is a living ecosystem in which institutional curation and individual contribution reinforce each other. When any MISO &mdash; whether created by a library, a university, or a single person &mdash; contributes to an AI response, value flows back to the creator. Knowledge as gift, honored in code.</p>
+            <details class="offering-more">
+              <summary>Read more</summary>
+              <div class="offering-more-body">
+                <p><em>Extended explainer forthcoming.</em></p>
+              </div>
+            </details>
+          </div>
+        </article>
+
+        <!-- B — The Library ID -->
+        <article class="offering-row" aria-labelledby="offerBTitle">
+          <aside class="offering-meta">
+            <span class="offering-letter" aria-hidden="true">B</span>
+          </aside>
+          <div class="offering-body">
+            <h3 class="offering-title" id="offerBTitle">The Library ID</h3>
+            <p class="offering-subtitle">Identity without surveillance.</p>
+            <p class="offering-lede">To participate in any commons &mdash; to contribute a MISO, to receive fair value when your knowledge is used, to have a voice in governance &mdash; you need to be identifiable. But the dominant models for digital identity are built on surveillance: iris scans, facial recognition, centralized biometric databases.</p>
+            <p>The Library ID offers a different path. Your library membership becomes your sovereign digital identity. You are known to the knowledge commons as a citizen of your library district &mdash; without biometric capture and without centralized tracking. The library authenticates that you are a real member of a real community. It never sees what you do with that identity afterward.</p>
+            <p>Privacy for the person, transparency for the institution. This is the principle libraries have defended for centuries, now made architectural.</p>
+            <details class="offering-more">
+              <summary>Read more</summary>
+              <div class="offering-more-body">
+                <p><em>Extended explainer forthcoming.</em></p>
+              </div>
+            </details>
+          </div>
+        </article>
+
+        <!-- C — The Homebrew AI Cohort -->
+        <article class="offering-row" aria-labelledby="offerCTitle">
+          <aside class="offering-meta">
+            <span class="offering-letter" aria-hidden="true">C</span>
+          </aside>
+          <div class="offering-body">
+            <h3 class="offering-title" id="offerCTitle">The Homebrew AI Cohort</h3>
+            <p class="offering-subtitle">The maker space, the right to repair, the sovereign device.</p>
+            <p class="offering-lede">In March 1975, a small group of electronics hobbyists began meeting in a garage in Menlo Park, California. They called themselves the Homebrew Computer Club. Among the regular attendees were two young men named Steve Wozniak and Steve Jobs. The personal computer revolution was incubated in that room &mdash; not by a corporation, not by a university, but by a community of practice sharing knowledge, parts, and know-how.</p>
+            <p>The pattern has repeated since &mdash; most visibly in the Raspberry Pi movement, which has put low-cost, educational computing into the hands of millions worldwide. Public library makerspaces, including those already operating at Arapahoe Libraries, are the contemporary successor spaces.</p>
+            <p>At each participating library, a Homebrew AI Cohort gathers to build, maintain, and upgrade their own sovereign AI-enabled devices &mdash; assembled as kits or purchased as complete units, with every layer owner-replaceable. The next revolution is waiting for its room.</p>
+            <details class="offering-more">
+              <summary>Read more</summary>
+              <div class="offering-more-body">
+                <p><em>Extended explainer forthcoming.</em></p>
+              </div>
+            </details>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ── 3.5 Arapahoe Libraries as Activating Institution ── -->
+    <section class="activating" id="activating" aria-labelledby="activatingHeading">
+      <div class="activating-inner">
+        <h2 id="activatingHeading" class="section-heading"><span class="heading-numeral" aria-hidden="true">VI</span>Arapahoe Libraries as Activating Institution</h2>
+
+        <p class="activating-lede">Arapahoe Libraries is the activating institution of this invitation. We are preparing to extend the invitation to a small number of early followers &mdash; institutions whose character, reach, and commitment to intellectual freedom uniquely qualify them to help shape what the alliance becomes. Conversations are being opened with:</p>
+
+        <section class="region" aria-labelledby="regionAustralia">
+          <header class="region-header">
+            <span class="region-numeral" aria-hidden="true">i.</span>
+            <div class="region-title">
+              <span class="region-preposition">In</span>
+              <h3 class="region-name" id="regionAustralia">Australia</h3>
+            </div>
+          </header>
+          <div class="institutions">
+            <article class="institution">
+              <header class="institution-meta">
+                <h4 class="institution-name">State Library Victoria</h4>
+                <span class="institution-location">Melbourne</span>
+              </header>
+              <blockquote class="institution-ack" cite="https://www.slv.vic.gov.au/">
+                State Library Victoria acknowledges the traditional lands of all the Victorian Aboriginal clans, and their cultural practices and knowledge systems. We pay our respects to their Elders, past and present, who have handed down these systems of practice to each new generation for millennia.
+              </blockquote>
+            </article>
+          </div>
+        </section>
+
+        <section class="region" aria-labelledby="regionCanada">
+          <header class="region-header">
+            <span class="region-numeral" aria-hidden="true">ii.</span>
+            <div class="region-title">
+              <span class="region-preposition">In</span>
+              <h3 class="region-name" id="regionCanada">Canada</h3>
+            </div>
+          </header>
+          <div class="institutions">
+            <article class="institution">
+              <header class="institution-meta">
+                <h4 class="institution-name">Toronto Public Library</h4>
+                <span class="institution-location">Toronto</span>
+              </header>
+              <blockquote class="institution-ack" cite="https://www.torontopubliclibrary.ca/">
+                Toronto Public Library is situated on Indigenous land and Dish with One Spoon territory. This is the traditional territory of the Haudenosaunee Confederacy, the Wendat, and the Mississaugas of the Credit First Nation. Toronto Public Library gratefully acknowledges these Indigenous Nations for their guardianship of this land.
+              </blockquote>
+            </article>
+          </div>
+        </section>
+
+        <section class="region" aria-labelledby="regionUS">
+          <header class="region-header">
+            <span class="region-numeral" aria-hidden="true">iii.</span>
+            <div class="region-title">
+              <span class="region-preposition">In the</span>
+              <h3 class="region-name" id="regionUS">United States</h3>
+            </div>
+          </header>
+          <div class="institutions">
+            <article class="institution">
+              <header class="institution-meta">
+                <h4 class="institution-name">Columbus Metropolitan Library</h4>
+                <span class="institution-location">Columbus, Ohio</span>
+              </header>
+              <p class="institution-note">On the ancestral lands of the Shawnee, Miami, Wyandot, Lenape (Delaware), and other Indigenous peoples whose presence on these lands extends across generations. Institutional acknowledgement language to be confirmed.</p>
+            </article>
+            <article class="institution">
+              <header class="institution-meta">
+                <h4 class="institution-name">Anythink Libraries</h4>
+                <span class="institution-location">Adams County, Colorado</span>
+              </header>
+              <p class="institution-note">On the ancestral lands of the Cheyenne, Arapaho, and Ute peoples. Institutional acknowledgement language to be confirmed.</p>
+            </article>
+          </div>
+        </section>
+
+        <aside class="host-acknowledgement" aria-label="Host institution land acknowledgement">
+          <span class="host-acknowledgement-label">Host Institution</span>
+          <p>Arapahoe Libraries itself stands on the ancestral lands of the Cheyenne, Arapaho, and Ute peoples.</p>
+          <p>We extend these invitations in the spirit of peers seeking peers, and in shared respect for the First Peoples of every land on which our libraries stand. The alliance will be shaped by those who accept.</p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ── 3.6 About the Co-Convenor ── -->
+    <section class="convenor" id="convenor" aria-labelledby="convenorHeading">
+      <div class="convenor-inner">
+        <figure class="convenor-figure">
+          <picture>
+            <source srcset="/images/bob-beth-geodesic.avif" type="image/avif">
+            <source srcset="/images/bob-beth-geodesic.webp" type="image/webp">
+            <img src="/images/bob-beth-geodesic.jpg" alt="Bob Beth at the Montr&eacute;al Biosph&egrave;re." width="1366" height="768" loading="lazy" decoding="async">
+          </picture>
+          <figcaption>Bob Beth at the Montr&eacute;al Biosph&egrave;re.</figcaption>
+        </figure>
+
+        <h2 id="convenorHeading" class="section-heading"><span class="heading-numeral" aria-hidden="true">VII</span>About the Co-Convenor</h2>
+
+        <div class="convenor-body">
+          <p>Bob Beth is the Strategic Innovations Advisor to Arapahoe Libraries and Co-Convenor of this invitation. His work in information technology spans five decades &mdash; from forerunners of personal computing, through global networking, to today's AI-native knowledge structures.</p>
+          <p>In 1987 he architected one of the first commercial global TCP/IP networks, for Babcock &amp; Brown. In the early 1990s he founded Proponent on Steve Jobs' NeXT Computer &mdash; the platform that became the foundation of Apple's OS X &mdash; pioneering no-code / low-code development for mission-critical applications long before the term existed. His work on Apple's store list system was instrumental to identifying the locations that became foundational to one of retail history's most successful transformations.</p>
+          <p>A Fellow of the World Business Academy, Bob moves annually between North America and Aotearoa New Zealand, Australia, and the South Pacific. In Aotearoa, collaborating with M&#257;ori leader Sir Tipene O&rsquo;Regan, he helped provide early vision for M&#257;ori-led Murihiku Regeneration, for which he was named global ambassador &mdash; work grounded in Indigenous values that treat stewardship and intergenerational responsibility as operational imperatives, not ideals.</p>
+          <p>His capacity to help leaders realize seemingly impossible visions was shaped by his grandfather, Jack Rorex, who led set construction at Walt Disney Studios for over thirty years as one of Walt's key prototypers. What Walt imagined, Grandpa Jack built. Growing up in that world shaped a way of thinking that, as Bob reflects, &ldquo;doesn't have boxes around it.&rdquo;</p>
+          <p>Bob holds no particular direct history with libraries. What he holds is five decades of building trustworthy infrastructure at inflection points, and an unshakeable conviction that the age of AI requires civilizing institutions at its centre. He brought this vision to Arapahoe Libraries. This invitation is the result.</p>
+          <p class="convenor-link"><a href="https://www.linkedin.com/in/bobbeth/" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 3.7 Hero Slider Two: The Space by Arapahoe Libraries ── -->
+    <!--
+      IMAGERY TODO (brief 3.7.1–3.7.2, 6.3): replace interim images with
+      authorized photography of The Space by Arapahoe Libraries,
+      12855 East Adam Aircraft Circle, Englewood, Colorado. Suggested
+      sequence: exterior → cafe → coworking → meeting room → event space →
+      reading/gathering moment.
+    -->
+    <section class="hero" id="heroTwo" aria-label="The Space by Arapahoe Libraries">
+      <div class="hero-slides" aria-hidden="true">
+        <div class="hero-slide active" data-caption="Interim placeholder — replace with The Space exterior">
+          <picture>
+            <source srcset="/images/showcase-1.avif" type="image/avif">
+            <source srcset="/images/showcase-1.webp" type="image/webp">
+            <img src="/images/showcase-1.jpg" alt="" width="2400" height="1600" loading="lazy" decoding="async">
+          </picture>
+        </div>
+        <div class="hero-slide" data-caption="Interim placeholder — replace with The Space cafe / coworking">
+          <picture>
+            <source srcset="/images/showcase-2.avif" type="image/avif">
+            <source srcset="/images/showcase-2.webp" type="image/webp">
+            <img src="/images/showcase-2.jpg" alt="" width="1920" height="1080" loading="lazy" decoding="async">
+          </picture>
+        </div>
+        <div class="hero-slide" data-caption="Interim placeholder — replace with The Space event or reading space">
+          <picture>
+            <source srcset="/images/showcase-3.avif" type="image/avif">
+            <img src="/images/showcase-3.webp" alt="" width="1600" height="1067" loading="lazy" decoding="async">
+          </picture>
+        </div>
+      </div>
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="hero-content">
+        <p class="hero-closing">The mission is waiting. The invitation is open.</p>
+      </div>
+      <div class="hero-indicators"
+           id="heroTwoIndicators"
+           data-dot-class="showcase-dot"
+           data-fill-class="showcase-dot-fill"
+           role="tablist"
+           aria-label="The Space slides"></div>
+      <div class="hero-caption" id="heroTwoCaption" aria-live="polite"></div>
+      <a id="the-space" aria-hidden="true"></a>
+    </section>
+
+    <!-- ── 3.8 Request the Briefing ── -->
+    <section class="briefing" id="briefing" aria-labelledby="briefingHeading">
+      <h2 id="briefingHeading">Request the Briefing</h2>
+      <p class="lede">The <em>Civilizing Role of Libraries in the Age of AI</em>, accompanied by a short cover letter from Arapahoe Libraries.</p>
+
+      <!-- TODO: replace YOUR_FORM_ID with the real Formspree (or other provider) form ID. -->
+      <form class="briefing-form"
+            id="briefingForm"
+            action="https://formspree.io/f/YOUR_FORM_ID"
+            method="post"
+            novalidate>
+        <label for="briefingEmail" class="sr-only">Your email address</label>
+        <input id="briefingEmail"
+               type="email"
+               name="email"
+               required
+               autocomplete="email"
+               placeholder="Your email address">
+
+        <!-- Honeypot: hidden from humans, detected when bots fill it. -->
+        <div class="hp-field" aria-hidden="true">
+          <label for="briefingWebsite">Leave this field empty</label>
+          <input id="briefingWebsite" type="text" name="website" tabindex="-1" autocomplete="off">
+        </div>
+
+        <button type="submit">Request the briefing</button>
+      </form>
+
+      <div class="briefing-error" id="briefingError" role="alert" aria-live="polite" hidden></div>
+
+      <p class="briefing-note">Email only. No name, role, or organization required. An acknowledgement will reach you from Arapahoe Libraries, with Bob Beth as a point of human contact.</p>
+
+      <noscript>
+        <p class="briefing-noscript">
+          JavaScript is disabled in your browser. To request the briefing, email
+          <a href="mailto:briefing@thelibraryai.org?subject=Briefing%20request">briefing@thelibraryai.org</a>
+          with the subject line &ldquo;Briefing request&rdquo;.
+        </p>
+      </noscript>
+
+      <div class="briefing-confirm" id="briefingConfirm" role="status" aria-live="polite" tabindex="-1"></div>
+    </section>
+
+  </main>
+
+  <!-- ── 3.9 Footer ── -->
+  <footer class="site-footer">
+    <p>An invitation from Arapahoe Libraries, co-convened with Bob Beth, Strategic Innovations Advisor.</p>
+    <!-- TODO 3.9.3: replace with final briefing-contact line once email is confirmed. -->
+    <p>Briefing requests: <a href="#briefing">the form above</a>.</p>
+    <p>&copy; 2026 Arapahoe Libraries. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
