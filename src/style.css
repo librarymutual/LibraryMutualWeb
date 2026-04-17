@@ -886,15 +886,8 @@ section.wide {
 
 /* ── Heading numeral prefix (I, II, III…) ── */
 .heading-numeral {
-  font-family: var(--serif-display);
-  font-style: italic;
-  font-weight: 400;
-  font-size: 0.55em;
-  color: var(--accent-soft);
-  letter-spacing: 0.08em;
-  margin-right: 0.6em;
-  vertical-align: 0.15em;
-  opacity: 0.8;
+  color: var(--accent);
+  margin-right: 0.35em;
 }
 .offering-body { min-width: 0; }
 .offering-title {
