@@ -1,8 +1,9 @@
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import './style.css';
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 gsap.ticker.lagSmoothing(0);
 
 const prefersReducedMotion =
@@ -30,21 +31,66 @@ const prefersReducedMotion =
   updateProgress();
 }
 
-/* ── Mobile nav toggle ── */
+/* ── Mobile nav toggle (GSAP-animated on mobile) ── */
 const navToggle = document.querySelector('.nav-toggle');
 const navLinks = document.querySelector('.nav-links');
 if (navToggle && navLinks) {
-  navToggle.addEventListener('click', () => {
-    const open = navLinks.classList.toggle('is-open');
+  const navItems = navLinks.querySelectorAll('li');
+  let openTl = null;
+
+  if (!prefersReducedMotion) {
+    const mm = gsap.matchMedia();
+    mm.add('(max-width: 720px)', () => {
+      gsap.set(navLinks, { y: -12 });
+      gsap.set(navItems, { y: -8, opacity: 0 });
+
+      openTl = gsap.timeline({ paused: true, defaults: { ease: 'power2.out' } });
+      openTl
+        .to(navLinks, { y: 0, opacity: 1, duration: 0.3 })
+        .to(navItems, { y: 0, opacity: 1, duration: 0.24, stagger: 0.055 }, '-=0.18');
+
+      return () => {
+        openTl?.kill();
+        openTl = null;
+        gsap.set([navLinks, ...navItems], { clearProps: 'y,opacity' });
+      };
+    });
+  }
+
+  const setOpen = (open) => {
+    navLinks.classList.toggle('is-open', open);
     navToggle.setAttribute('aria-expanded', String(open));
+    if (openTl) open ? openTl.play() : openTl.reverse();
+  };
+
+  navToggle.addEventListener('click', () => {
+    setOpen(!navLinks.classList.contains('is-open'));
   });
   navLinks.addEventListener('click', (e) => {
-    if (e.target.tagName === 'A') {
-      navLinks.classList.remove('is-open');
-      navToggle.setAttribute('aria-expanded', 'false');
-    }
+    if (e.target.tagName === 'A') setOpen(false);
   });
 }
+
+/* ── Smooth-scroll to #briefing (and any other in-page anchors) ── */
+document.querySelectorAll('a[href^="#"]').forEach((link) => {
+  const href = link.getAttribute('href');
+  if (!href || href === '#' || href.length < 2) return;
+  link.addEventListener('click', (e) => {
+    const target = document.querySelector(href);
+    if (!target) return;
+    e.preventDefault();
+    if (prefersReducedMotion) {
+      target.scrollIntoView({ block: 'start' });
+    } else {
+      gsap.to(window, {
+        duration: href === '#briefing' ? 0.85 : 0.7,
+        scrollTo: { y: target, offsetY: 20, autoKill: true },
+        ease: 'power3.out',
+      });
+    }
+    history.pushState(null, '', href);
+  });
+});
 
 /* ── Hero slideshow factory ──
    Handles both hero sliders. Accepts a root element and options:
