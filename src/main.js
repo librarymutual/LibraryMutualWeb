@@ -2,9 +2,12 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import './style.css';
+import { initAcknowledgmentModal } from './acknowledgment-modal.js';
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 gsap.ticker.lagSmoothing(0);
+
+initAcknowledgmentModal();
 
 const prefersReducedMotion =
   window.matchMedia('(prefers-reduced-motion: reduce)').matches;

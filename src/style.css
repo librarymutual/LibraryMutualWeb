@@ -1434,6 +1434,194 @@ footer.site-footer p:first-child {
 }
 footer.site-footer a { color: var(--accent); }
 
+/* ── Acknowledgment of Country ──
+   Modal on first visit, and shared styles used by the standalone
+   /acknowledgment page. Typography is quiet and textual — this is an
+   offering, not a marketing beat. */
+
+.ack-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(0.75rem, 3vw, 2rem);
+  background: rgba(10, 8, 6, 0.64);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  opacity: 1;
+}
+
+.ack-dialog {
+  width: min(92vw, 680px);
+  max-height: 85vh;
+  background: var(--bg-warm);
+  color: var(--ink);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.35);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  outline: none;
+}
+
+.ack-scroll {
+  overflow-y: auto;
+  padding: clamp(1.25rem, 3.2vw, 2.25rem) clamp(1.25rem, 4vw, 2.5rem);
+  scrollbar-gutter: stable;
+}
+
+.ack-scroll::-webkit-scrollbar { width: 8px; }
+.ack-scroll::-webkit-scrollbar-track { background: transparent; }
+.ack-scroll::-webkit-scrollbar-thumb {
+  background: rgba(107, 77, 46, 0.35);
+  border-radius: 4px;
+}
+.ack-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(107, 77, 46, 0.55);
+}
+.ack-scroll { scrollbar-width: thin; scrollbar-color: rgba(107, 77, 46, 0.4) transparent; }
+
+.ack-title {
+  font-family: var(--serif-display);
+  font-weight: 600;
+  font-size: clamp(1.4rem, 3.2vw, 1.9rem);
+  line-height: 1.25;
+  text-align: center;
+  color: var(--ink-deep);
+  margin-bottom: 1.25rem;
+  letter-spacing: 0.01em;
+}
+
+.ack-figure {
+  margin: 0 auto 1.35rem;
+  max-width: 100%;
+  text-align: center;
+}
+.ack-figure img {
+  display: inline-block;
+  max-width: 100%;
+  max-height: 280px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+  object-fit: cover;
+}
+@media (min-width: 720px) {
+  .ack-figure img { max-height: 320px; }
+}
+
+.ack-quote {
+  font-family: var(--serif-body);
+  font-style: italic;
+  font-size: clamp(1.05rem, 1.25vw + 0.85rem, 1.2rem);
+  line-height: 1.55;
+  color: var(--ink);
+  text-align: center;
+  max-width: 34rem;
+  margin: 0.25rem auto 0.9rem;
+  padding: 0 0.5rem;
+  border-left: none;
+  quotes: none;
+}
+.ack-quote p { margin: 0; }
+
+.ack-bridge {
+  text-align: center;
+  color: var(--ink-2);
+  font-size: 0.95rem;
+  margin-bottom: 1.25rem;
+}
+
+.ack-rule {
+  border: none;
+  border-top: 1px solid var(--rule);
+  margin: 1.35rem auto;
+  width: min(200px, 40%);
+}
+
+.ack-body {
+  max-width: 34rem;
+  margin: 0 auto;
+  color: var(--ink);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+.ack-body p {
+  margin: 0 0 1rem;
+}
+.ack-body p:last-child {
+  margin-bottom: 0;
+}
+
+.ack-signature {
+  max-width: 34rem;
+  margin: 1.75rem auto 0;
+  font-style: italic;
+  color: var(--ink-2);
+  text-align: right;
+  font-size: 0.95rem;
+}
+
+.ack-actions {
+  display: flex;
+  justify-content: center;
+  padding: 1rem clamp(1.25rem, 4vw, 2.5rem) 1.35rem;
+  border-top: 1px solid var(--rule);
+  background: var(--bg-warm);
+}
+.ack-dismiss {
+  font-family: var(--serif-body);
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+  padding: 0.75rem 1.75rem;
+  background: var(--ink);
+  color: var(--bg-warm);
+  border: 1px solid var(--ink);
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background 0.25s ease, color 0.25s ease, transform 0.15s ease;
+}
+.ack-dismiss:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+.ack-dismiss:active {
+  transform: translateY(1px);
+}
+
+/* Standalone /acknowledgment page — reuses .ack-* typography inside
+   a gentle parchment column. */
+body.ack-page {
+  background: var(--bg);
+}
+.ack-page-shell {
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: clamp(2rem, 6vw, 4rem) clamp(1.25rem, 5vw, 2.5rem) 4rem;
+}
+.ack-page-shell .ack-title {
+  text-align: center;
+}
+.ack-page-shell .ack-figure img {
+  max-height: 360px;
+}
+.ack-page-shell .ack-back {
+  display: inline-block;
+  margin-top: 2.5rem;
+  font-size: 0.95rem;
+  color: var(--accent);
+}
+
+/* Footer link to the standalone page */
+.ack-footer-link {
+  display: inline-block;
+  margin-top: 0.4rem;
+  font-size: 0.8rem;
+  color: var(--ink-3);
+}
+
 /* ── Accessibility: reduced motion ── */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
