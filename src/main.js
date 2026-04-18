@@ -84,6 +84,21 @@ if (navToggle && navLinks) {
 }
 
 /* ── Smooth-scroll to #briefing (and any other in-page anchors) ── */
+const flashBriefing = () => {
+  const section = document.querySelector('#briefing');
+  const form = document.querySelector('.briefing-form');
+  if (!section) return;
+  const tl = gsap.timeline();
+  if (form) {
+    tl.fromTo(form,
+      { scale: 0.985, boxShadow: '0 0 0 0 rgba(197, 158, 84, 0)' },
+      { scale: 1, boxShadow: '0 0 0 6px rgba(197, 158, 84, 0.28)', duration: 0.5, ease: 'power2.out' },
+    );
+    tl.to(form, { boxShadow: '0 0 0 0 rgba(197, 158, 84, 0)', duration: 0.9, ease: 'power2.inOut' });
+  }
+  return tl;
+};
+
 document.querySelectorAll('a[href^="#"]').forEach((link) => {
   const href = link.getAttribute('href');
   if (!href || href === '#' || href.length < 2) return;
@@ -91,17 +106,29 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
     const target = document.querySelector(href);
     if (!target) return;
     e.preventDefault();
+
     if (prefersReducedMotion) {
       target.scrollIntoView({ block: 'start' });
       history.pushState(null, '', href);
       return;
     }
+
     const isBriefing = href === '#briefing';
+
+    // Tap feedback on the clicked element (tiny squish-and-release).
+    gsap.fromTo(link,
+      { scale: 0.94 },
+      { scale: 1, duration: 0.45, ease: 'back.out(2)' },
+    );
+
     gsap.to(window, {
-      duration: isBriefing ? 1.4 : 0.9,
-      scrollTo: { y: target, offsetY: 16, autoKill: true },
-      ease: isBriefing ? 'power2.inOut' : 'power3.out',
-      onComplete: () => history.pushState(null, '', href),
+      duration: isBriefing ? 1.3 : 0.9,
+      scrollTo: { y: target, offsetY: 12, autoKill: false },
+      ease: isBriefing ? 'power3.inOut' : 'power3.out',
+      onComplete: () => {
+        history.pushState(null, '', href);
+        if (isBriefing) flashBriefing();
+      },
     });
   });
 });
