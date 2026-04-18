@@ -37,11 +37,13 @@ const navLinks = document.querySelector('.nav-links');
 if (navToggle && navLinks) {
   const navItems = navLinks.querySelectorAll('li');
   let openTl = null;
+  let mobileActive = false;
 
   if (!prefersReducedMotion) {
     const mm = gsap.matchMedia();
     mm.add('(max-width: 720px)', () => {
-      gsap.set(navLinks, { y: -12 });
+      mobileActive = true;
+      gsap.set(navLinks, { y: -12, opacity: 0 });
       gsap.set(navItems, { y: -8, opacity: 0 });
 
       openTl = gsap.timeline({ paused: true, defaults: { ease: 'power2.out' } });
@@ -50,6 +52,7 @@ if (navToggle && navLinks) {
         .to(navItems, { y: 0, opacity: 1, duration: 0.24, stagger: 0.055 }, '-=0.18');
 
       return () => {
+        mobileActive = false;
         openTl?.kill();
         openTl = null;
         gsap.set([navLinks, ...navItems], { clearProps: 'y,opacity' });
@@ -60,14 +63,23 @@ if (navToggle && navLinks) {
   const setOpen = (open) => {
     navLinks.classList.toggle('is-open', open);
     navToggle.setAttribute('aria-expanded', String(open));
-    if (openTl) open ? openTl.play() : openTl.reverse();
+    if (openTl) {
+      open ? openTl.play() : openTl.reverse();
+    } else if (mobileActive === false && !open) {
+      // prefers-reduced-motion path: ensure closed state is visible
+      gsap.set(navLinks, { clearProps: 'y,opacity' });
+    }
   };
 
   navToggle.addEventListener('click', () => {
     setOpen(!navLinks.classList.contains('is-open'));
   });
   navLinks.addEventListener('click', (e) => {
-    if (e.target.tagName === 'A') setOpen(false);
+    if (e.target.tagName !== 'A') return;
+    // Close immediately so the scroll animation has a clean canvas.
+    if (openTl) openTl.progress(0).pause();
+    navLinks.classList.remove('is-open');
+    navToggle.setAttribute('aria-expanded', 'false');
   });
 }
 
@@ -81,14 +93,16 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
     e.preventDefault();
     if (prefersReducedMotion) {
       target.scrollIntoView({ block: 'start' });
-    } else {
-      gsap.to(window, {
-        duration: href === '#briefing' ? 0.85 : 0.7,
-        scrollTo: { y: target, offsetY: 20, autoKill: true },
-        ease: 'power3.out',
-      });
+      history.pushState(null, '', href);
+      return;
     }
-    history.pushState(null, '', href);
+    const isBriefing = href === '#briefing';
+    gsap.to(window, {
+      duration: isBriefing ? 1.4 : 0.9,
+      scrollTo: { y: target, offsetY: 16, autoKill: true },
+      ease: isBriefing ? 'power2.inOut' : 'power3.out',
+      onComplete: () => history.pushState(null, '', href),
+    });
   });
 });
 
