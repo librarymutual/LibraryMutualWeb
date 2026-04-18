@@ -1439,6 +1439,16 @@ footer.site-footer a { color: var(--accent); }
    /acknowledgment page. Typography is quiet and textual — this is an
    offering, not a marketing beat. */
 
+/* Cross-fade teleport veil (used for #briefing anchor jumps). */
+.page-veil {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background: var(--bg);
+  opacity: 0;
+  pointer-events: none;
+}
+
 .ack-overlay {
   position: fixed;
   inset: 0;

@@ -102,6 +102,24 @@ const flashBriefing = () => {
   return tl;
 };
 
+// Cross-fade teleport: cream veil in → jump to target → cream veil out → flash.
+// Used for #briefing so the destination is what matters, not the travel.
+const crossfadeTo = (target, href, { onArrive } = {}) => {
+  const veil = document.createElement('div');
+  veil.className = 'page-veil';
+  document.body.appendChild(veil);
+
+  const tl = gsap.timeline({ onComplete: () => veil.remove() });
+  tl.to(veil, { opacity: 1, duration: 0.22, ease: 'power2.out' });
+  tl.call(() => {
+    const y = target.getBoundingClientRect().top + window.scrollY - 12;
+    window.scrollTo(0, y);
+    history.pushState(null, '', href);
+  });
+  tl.to(veil, { opacity: 0, duration: 0.3, ease: 'power2.in' }, '+=0.02');
+  if (onArrive) tl.add(onArrive, '<');
+};
+
 document.querySelectorAll('a[href^="#"]').forEach((link) => {
   const href = link.getAttribute('href');
   if (!href || href === '#' || href.length < 2) return;
@@ -124,14 +142,16 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
       { scale: 1, duration: 0.45, ease: 'back.out(2)' },
     );
 
+    if (isBriefing) {
+      crossfadeTo(target, href, { onArrive: flashBriefing });
+      return;
+    }
+
     gsap.to(window, {
-      duration: isBriefing ? 1.3 : 0.9,
+      duration: 0.9,
       scrollTo: { y: target, offsetY: 12, autoKill: false },
-      ease: isBriefing ? 'power3.inOut' : 'power3.out',
-      onComplete: () => {
-        history.pushState(null, '', href);
-        if (isBriefing) flashBriefing();
-      },
+      ease: 'power3.out',
+      onComplete: () => history.pushState(null, '', href),
     });
   });
 });
