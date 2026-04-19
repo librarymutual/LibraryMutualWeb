@@ -719,9 +719,11 @@ section.prose#invitation::after  { bottom: 1.75rem; }
   .invitation-image {
     aspect-ratio: 5 / 4;
     max-height: 420px;
+    order: 2;
   }
   .signatories {
     align-items: stretch;
+    order: 1;
   }
 }
 
