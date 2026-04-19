@@ -99,6 +99,10 @@ const flashBriefing = () => {
     );
     tl.to(form, { boxShadow: '0 0 0 0 rgba(197, 158, 84, 0)', duration: 0.9, ease: 'power2.inOut' });
   }
+  // Lead the user into the action once the flash settles.
+  tl.call(() => {
+    document.getElementById('briefingEmail')?.focus({ preventScroll: true });
+  });
   return tl;
 };
 
@@ -364,7 +368,7 @@ if (!prefersReducedMotion) {
         opacity: 0, y: 32, scale: 0.97, duration: 1.1, ease: 'power3.out',
       }, '-=0.6');
     }
-    const paragraphs = section.querySelectorAll('.narrative-body p, .trajectory-copy p');
+    const paragraphs = section.querySelectorAll('.narrative-body p, .trajectory-copy p, .trajectory-copy .trajectory-quote');
     if (paragraphs.length) {
       tl.from(paragraphs, {
         opacity: 0, y: 22, duration: 0.8, stagger: 0.12, ease: 'power3.out',
@@ -375,7 +379,8 @@ if (!prefersReducedMotion) {
   // Invitation: heading+body, signatures stagger, image sweeps in with a
   // clip-path reveal for a more apparent entrance.
   reveal(document.querySelector('#invitation .section-heading'), { y: 24, duration: 1 });
-  reveal(document.querySelector('.invitation-body p:first-of-type'), { y: 24 });
+  reveal(document.querySelector('.invitation-address'), { y: 16, duration: 0.8, delay: 0.15 });
+  reveal(document.querySelector('.invitation-body p:first-of-type'), { y: 24, delay: 0.25 });
   const signatories = document.querySelectorAll('#invitation .signatories .signatory');
   if (signatories.length) {
     gsap.from(signatories, {
@@ -568,22 +573,75 @@ if (briefingForm && briefingConfirm) {
   const submitButton = briefingForm.querySelector('button[type="submit"]');
   const originalButtonText = submitButton ? submitButton.textContent : '';
 
+  const shakeEmailInput = () => {
+    if (prefersReducedMotion) return;
+    const input = briefingForm.querySelector('input[type="email"]');
+    if (!input) return;
+    gsap.fromTo(input,
+      { x: 0 },
+      {
+        keyframes: [
+          { x: -7, duration: 0.07 },
+          { x: 7,  duration: 0.1 },
+          { x: -5, duration: 0.1 },
+          { x: 5,  duration: 0.1 },
+          { x: 0,  duration: 0.1 },
+        ],
+        ease: 'power1.inOut',
+      });
+  };
+
   const showError = (message) => {
     if (!briefingError) return;
     briefingError.textContent = message;
     briefingError.hidden = false;
+    if (!prefersReducedMotion) {
+      gsap.fromTo(briefingError,
+        { opacity: 0, y: -6 },
+        { opacity: 1, y: 0, duration: 0.35, ease: 'power2.out' });
+    }
+    shakeEmailInput();
   };
   const clearError = () => {
     if (!briefingError) return;
     briefingError.textContent = '';
     briefingError.hidden = true;
   };
+  const revealConfirm = () => {
+    if (prefersReducedMotion) {
+      briefingForm.setAttribute('hidden', '');
+      briefingConfirm.classList.add('is-visible');
+      briefingConfirm.focus();
+      return;
+    }
+    const tl = gsap.timeline();
+    tl.to(briefingForm, { opacity: 0, y: -8, duration: 0.3, ease: 'power2.in' });
+    tl.call(() => {
+      briefingForm.setAttribute('hidden', '');
+      gsap.set(briefingConfirm, { opacity: 0, y: 10 });
+      briefingConfirm.classList.add('is-visible');
+    });
+    tl.to(briefingConfirm, {
+      opacity: 1, y: 0, duration: 0.45, ease: 'power3.out',
+      onComplete: () => briefingConfirm.focus({ preventScroll: true }),
+    });
+  };
   const showConfirm = (email) => {
-    briefingForm.setAttribute('hidden', '');
-    briefingConfirm.classList.add('is-visible');
     briefingConfirm.textContent =
       `Thank you. We will send the briefing to ${email} shortly, with a short cover note from Arapahoe Libraries.`;
-    briefingConfirm.focus();
+    revealConfirm();
+  };
+
+  let sendingTween = null;
+  const startSendingPulse = () => {
+    if (!submitButton || prefersReducedMotion) return;
+    sendingTween = gsap.to(submitButton, {
+      opacity: 0.55, duration: 0.7, yoyo: true, repeat: -1, ease: 'sine.inOut',
+    });
+  };
+  const stopSendingPulse = () => {
+    if (sendingTween) { sendingTween.kill(); sendingTween = null; }
+    if (submitButton) gsap.set(submitButton, { clearProps: 'opacity' });
   };
 
   briefingForm.addEventListener('submit', async (e) => {
@@ -593,9 +651,8 @@ if (briefingForm && briefingConfirm) {
     // We silently show the confirm screen without submitting anywhere.
     const honeypot = briefingForm.querySelector('input[name="website"]');
     if (honeypot && honeypot.value.trim() !== '') {
-      briefingForm.setAttribute('hidden', '');
-      briefingConfirm.classList.add('is-visible');
       briefingConfirm.textContent = 'Thank you. Your request has been received.';
+      revealConfirm();
       return;
     }
 
@@ -620,6 +677,7 @@ if (briefingForm && briefingConfirm) {
     if (submitButton) {
       submitButton.disabled = true;
       submitButton.textContent = 'Sending…';
+      startSendingPulse();
     }
 
     try {
@@ -629,8 +687,10 @@ if (briefingForm && briefingConfirm) {
         body: new FormData(briefingForm),
       });
       if (!response.ok) throw new Error(`Request failed: ${response.status}`);
+      stopSendingPulse();
       showConfirm(email);
     } catch (err) {
+      stopSendingPulse();
       showError(
         'Sorry — we could not submit your request. Please email briefing@thelibraryai.org instead.',
       );
