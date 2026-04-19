@@ -610,11 +610,13 @@ section.prose#invitation::after  { bottom: 1.75rem; }
   gap: 3.5rem;
   align-items: start;
 }
-/* Source order = body first for screen readers, image second.
-   Visual order on wide viewports puts image on right (natural flow). */
+/* Right column: reading-room image stacked above signatories. */
+.invitation-side {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
 .invitation-image {
-  position: sticky;
-  top: 6rem;
   aspect-ratio: 4 / 5;
   width: 100%;
   border-radius: 2px;
@@ -646,51 +648,55 @@ section.prose#invitation::after  { bottom: 1.75rem; }
 }
 .signatories {
   list-style: none;
-  padding: 1.5rem 0 0;
-  margin: 2rem 0 0;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 2rem;
-  border-top: 1px solid var(--rule);
-  flex-wrap: wrap;
-}
-.signatory {
-  flex: 0 1 14rem;
-  min-width: 12.5rem;
-  text-align: center;
+  padding: 1.25rem 0 0;
+  margin: 0.25rem 0 0;
   display: flex;
   flex-direction: column;
+  align-items: stretch;
+  gap: 1rem;
+  border-top: 1px solid var(--rule);
+}
+.signatory {
+  display: flex;
+  flex-direction: row;
   align-items: center;
+  gap: 0.9rem;
+  text-align: left;
 }
 .signatory-portrait {
+  flex: 0 0 auto;
   display: block;
-  width: 8rem;
-  height: 8rem;
+  width: 64px;
+  height: 64px;
   border-radius: 50%;
   object-fit: cover;
   background: var(--bg-warm);
-  box-shadow: 0 10px 30px var(--shadow);
+  box-shadow: 0 6px 18px var(--shadow);
+}
+.signatory-text {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 .signatory-name {
-  margin: 0.6rem 0 0.1rem;
+  margin: 0;
   font-family: var(--serif-body);
-  font-size: 0.95rem;
+  font-size: 0.98rem;
   font-weight: 600;
   color: var(--ink);
   line-height: 1.3;
-  white-space: nowrap;
 }
 .signatory-role {
-  margin: 0 0 0.25rem;
-  font-size: 0.78rem;
+  margin: 0.1rem 0 0.15rem;
+  font-size: 0.8rem;
   color: var(--ink-3);
   font-style: italic;
-  line-height: 1.4;
+  line-height: 1.35;
 }
 .signatory-link {
   margin: 0;
-  font-size: 0.78rem;
+  font-size: 0.76rem;
   letter-spacing: 0.04em;
 }
 .signatory-link a {
@@ -711,14 +717,11 @@ section.prose#invitation::after  { bottom: 1.75rem; }
     gap: 2rem;
   }
   .invitation-image {
-    position: static;
     aspect-ratio: 5 / 4;
     max-height: 420px;
   }
   .signatories {
-    flex-direction: column;
-    gap: 2rem;
-    align-items: center;
+    align-items: stretch;
   }
 }
 
