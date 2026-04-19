@@ -449,6 +449,12 @@ if (!prefersReducedMotion) {
     tl.from(rationale.querySelector('.section-heading'), {
       opacity: 0, y: 26, duration: 1, ease: 'power3.out',
     }, '-=0.5');
+    const figure = rationale.querySelector('.narrative-figure-block');
+    if (figure) {
+      tl.from(figure, {
+        opacity: 0, y: 32, scale: 0.97, duration: 1.1, ease: 'power3.out',
+      }, '-=0.5');
+    }
     const paragraphs = rationale.querySelectorAll('.rationale-body p');
     if (paragraphs.length) {
       tl.from(paragraphs, {
