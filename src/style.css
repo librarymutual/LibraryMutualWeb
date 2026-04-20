@@ -286,6 +286,10 @@ nav.site-nav.is-scrolled {
   font-style: italic;
   color: #e8dcc5;
 }
+.hero-tagline-coda {
+  display: block;
+  margin-top: 0.6em;
+}
 .hero-indicators {
   position: absolute;
   bottom: 1.75rem;
@@ -965,6 +969,11 @@ section.prose#invitation::after  { bottom: 1.75rem; }
   margin-right: 0.35em;
 }
 .offering-body { min-width: 0; }
+/* In-section figures (e.g. Homebrew, VI-C) match the body-copy measure so
+   they do not extend beyond the paragraph column. */
+.offering-body .narrative-figure-block {
+  max-width: var(--measure);
+}
 .offering-title {
   font-family: var(--serif-display);
   font-size: clamp(1.5rem, 2.4vw, 1.95rem);
@@ -1400,7 +1409,8 @@ section.prose#invitation::after  { bottom: 1.75rem; }
   gap: 0.5rem;
   flex-wrap: wrap;
 }
-.briefing-form input[type="email"] {
+.briefing-form input[type="email"],
+.briefing-form input[type="text"]:not([tabindex="-1"]) {
   flex: 1 1 240px;
   min-width: 0;
   padding: 0.95rem 1.1rem;
@@ -1412,10 +1422,16 @@ section.prose#invitation::after  { bottom: 1.75rem; }
   border-radius: 2px;
   transition: border-color 0.2s, box-shadow 0.2s;
 }
-.briefing-form input[type="email"]::placeholder {
+/* Stack the name/district fields on their own rows above the email+button row. */
+.briefing-form input[type="text"]:not([tabindex="-1"]) {
+  flex: 1 1 100%;
+}
+.briefing-form input[type="email"]::placeholder,
+.briefing-form input[type="text"]:not([tabindex="-1"])::placeholder {
   color: var(--ink-3);
 }
-.briefing-form input[type="email"]:focus {
+.briefing-form input[type="email"]:focus,
+.briefing-form input[type="text"]:not([tabindex="-1"]):focus {
   outline: none;
   border-color: var(--oxblood);
   box-shadow: 0 0 0 3px rgba(110, 46, 40, 0.12);
