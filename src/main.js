@@ -200,10 +200,13 @@ function createSlideshow({
   const indicators = Array.from(indicatorContainer.children);
   const fills = indicators.map((i) => i.firstElementChild);
 
-  // Initial Ken Burns on first slide
+  // Initial Ken Burns on first slide. Runs 30% faster than the slide hold,
+  // so the zoom settles before the crossfade and the eye has a moment with
+  // the final framing.
+  const kenBurnsDuration = slideDuration * 0.7;
   if (!prefersReducedMotion) {
     gsap.fromTo(slides[0], { scale: 1 }, {
-      scale: kenBurnsScale, duration: slideDuration, ease: 'none'
+      scale: kenBurnsScale, duration: kenBurnsDuration, ease: 'none'
     });
   }
 
@@ -211,8 +214,12 @@ function createSlideshow({
   // CSS leaves them visible for JS-off readers.
   if (taglineEl) {
     gsap.set(taglineEl, { opacity: 0 });
+    // Optional coda inside the tagline (hero one): lands as a separate beat.
+    const codaEl = taglineEl.querySelector('.hero-tagline-coda');
+    if (codaEl) gsap.set(codaEl, { opacity: 0, y: 10 });
     if (prefersReducedMotion) {
       gsap.set(taglineEl, { opacity: 1 });
+      if (codaEl) gsap.set(codaEl, { opacity: 1, y: 0 });
     } else {
       gsap.to(taglineEl, {
         opacity: 1,
@@ -220,6 +227,15 @@ function createSlideshow({
         delay: taglineDelay / 1000,
         ease: 'power2.out',
       });
+      if (codaEl) {
+        gsap.to(codaEl, {
+          opacity: 1, y: 0,
+          duration: 1.1,
+          // Read the first sentence, then land the coda as its own beat.
+          delay: (taglineDelay / 1000) + 1.8,
+          ease: 'power2.out',
+        });
+      }
     }
   }
   if (captionEl && captionDelay > 0) {
@@ -267,7 +283,7 @@ function createSlideshow({
     tl.to(slides[prev], { opacity: 0, duration: transitionDuration, ease: 'power2.inOut' }, 0);
     gsap.set(slides[current], { scale: 1 });
     tl.to(slides[current], { opacity: 1, duration: transitionDuration, ease: 'power2.inOut' }, 0);
-    tl.to(slides[current], { scale: kenBurnsScale, duration: slideDuration, ease: 'none' }, 0);
+    tl.to(slides[current], { scale: kenBurnsScale, duration: kenBurnsDuration, ease: 'none' }, 0);
     if (captionEl) {
       // Swap text at the midpoint of the image crossfade — no opacity change,
       // so there is no blink. The changing caption is barely perceptible because
@@ -514,31 +530,46 @@ if (!prefersReducedMotion) {
     });
   }
 
-  // Convenor — landscape figure rises first, then heading, then body paragraphs stagger.
+  // Convenor — heading rises first (DOM order: heading → figure → body),
+  // landscape figure follows with a gentle scale, then body paragraphs stagger.
   const convenor = document.querySelector('.convenor');
   if (convenor) {
     const tl = gsap.timeline({
       scrollTrigger: { trigger: convenor, start: 'top 78%', once: true },
     });
-    tl.from(convenor.querySelector('.convenor-figure'), {
-      opacity: 0, y: 32, scale: 0.97, duration: 1.1, ease: 'power3.out',
-    });
     tl.from(convenor.querySelector('.section-heading'), {
       opacity: 0, y: 26, duration: 0.9, ease: 'power3.out',
-    }, '-=0.6');
+    });
+    const convenorFigure = convenor.querySelector('.convenor-figure');
+    if (convenorFigure) {
+      tl.from(convenorFigure, {
+        opacity: 0, y: 32, scale: 0.97, duration: 1.1, ease: 'power3.out',
+      }, '-=0.45');
+    }
     tl.from(convenor.querySelectorAll('.convenor-body p'), {
       opacity: 0, y: 22, duration: 0.8, stagger: 0.08, ease: 'power3.out',
-    }, '-=0.5');
+    }, '-=0.55');
   }
 
-  // Briefing — heading draws in, lede rises, form fades with scale.
+  // Briefing — heading draws in, lede rises, form fades with scale, then
+  // the fields inside stagger up so each input lands as its own invitation.
   reveal(document.querySelector('#briefing .lede'), { y: 20 });
   const briefingForm = document.querySelector('.briefing-form');
   if (briefingForm) {
-    gsap.from(briefingForm, {
+    const fields = briefingForm.querySelectorAll(
+      'input:not([tabindex="-1"]), button[type="submit"]'
+    );
+    const tl = gsap.timeline({
       scrollTrigger: { trigger: briefingForm, start: 'top 85%', once: true },
+    });
+    tl.from(briefingForm, {
       opacity: 0, y: 30, scale: 0.98, duration: 1, ease: 'power3.out',
     });
+    if (fields.length) {
+      tl.from(fields, {
+        opacity: 0, y: 14, duration: 0.55, stagger: 0.08, ease: 'power3.out',
+      }, '-=0.55');
+    }
   }
 
   // Footer — quiet fade.

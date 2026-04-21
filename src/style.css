@@ -1612,6 +1612,29 @@ footer.site-footer a { color: var(--accent); }
   .ack-figure img { max-height: 360px; }
 }
 
+/* Closing figure beneath the signature: full-width of the content column,
+   with a small-type caption beneath. */
+.ack-closing-figure {
+  max-width: 34rem;
+  margin: 1.75rem auto 0;
+}
+.ack-closing-figure picture,
+.ack-closing-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+}
+.ack-closing-figure figcaption {
+  margin-top: 0.6rem;
+  font-size: 0.82rem;
+  color: var(--ink-3, var(--ink-2));
+  font-style: italic;
+  text-align: center;
+  line-height: 1.5;
+}
+
 .ack-quote {
   font-family: var(--serif-body);
   font-style: italic;

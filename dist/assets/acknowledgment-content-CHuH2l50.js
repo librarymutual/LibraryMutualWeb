@@ -1,24 +1,5 @@
-// Single source of truth for the Acknowledgment of Country and Lineage.
-// Rendered into both the first-visit modal and the standalone /acknowledgment page.
-
-export const acknowledgmentTitle = 'Acknowledgment of Country and Lineage';
-
-// Hide the figure gracefully if the stone image is missing — CSP forbids
-// inline onerror handlers, so the caller wires this up after mount.
-export function wireAcknowledgmentImage(container) {
-  const img = container?.querySelector?.('.ack-figure img');
-  const figure = container?.querySelector?.('.ack-figure');
-  if (!img || !figure) return;
-  if (img.complete && img.naturalWidth === 0) {
-    figure.remove();
-    return;
-  }
-  img.addEventListener('error', () => figure.remove(), { once: true });
-}
-
-export function acknowledgmentHTML({ titleId = 'ackTitle', headingLevel = 'h2' } = {}) {
-  return `
-    <${headingLevel} id="${titleId}" class="ack-title">${acknowledgmentTitle}</${headingLevel}>
+(function(){const t=document.createElement("link").relList;if(t&&t.supports&&t.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))i(e);new MutationObserver(e=>{for(const o of e)if(o.type==="childList")for(const r of o.addedNodes)r.tagName==="LINK"&&r.rel==="modulepreload"&&i(r)}).observe(document,{childList:!0,subtree:!0});function a(e){const o={};return e.integrity&&(o.integrity=e.integrity),e.referrerPolicy&&(o.referrerPolicy=e.referrerPolicy),e.crossOrigin==="use-credentials"?o.credentials="include":e.crossOrigin==="anonymous"?o.credentials="omit":o.credentials="same-origin",o}function i(e){if(e.ep)return;e.ep=!0;const o=a(e);fetch(e.href,o)}})();const s="Acknowledgment of Country and Lineage";function h(n){const t=n?.querySelector?.(".ack-figure img"),a=n?.querySelector?.(".ack-figure");if(!(!t||!a)){if(t.complete&&t.naturalWidth===0){a.remove();return}t.addEventListener("error",()=>a.remove(),{once:!0})}}function l({titleId:n="ackTitle",headingLevel:t="h2"}={}){return`
+    <${t} id="${n}" class="ack-title">${s}</${t}>
 
     <figure class="ack-figure">
       <img
@@ -68,5 +49,4 @@ export function acknowledgmentHTML({ titleId = 'ackTitle', headingLevel = 'h2' }
       </picture>
       <figcaption>Bob Beth at Bogangar headland, Bundjalung Country.</figcaption>
     </figure>
-  `;
-}
+  `}export{l as a,h as w};
