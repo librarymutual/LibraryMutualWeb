@@ -51,7 +51,7 @@ Brief §3.6.2, §6.4. Currently an initials placeholder. Supply a portrait
 ```html
 <div class="convenor-portrait"
      role="img"
-     aria-label="Bob Beth, Strategic Innovations Advisor and Co-Convenor"
+     aria-label="Bob Beth, Convening Steward and Strategic Innovations Advisor"
      style="background-image:url('/images/bob-beth.jpg')">
 </div>
 ```

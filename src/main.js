@@ -502,32 +502,29 @@ if (!prefersReducedMotion) {
     }, '-=0.65');
   });
 
-  reveal(document.querySelector('.activating-lede'), { y: 30, duration: 1.1 });
-
-  // Regions: header rises, then institution cards scale + lift in with stagger.
-  gsap.utils.toArray('.region').forEach((region) => {
+  // Dream Room — heading rises, the two portraits fade up with a gentle
+  // stagger, then the body paragraphs cascade in.
+  const dreamRoom = document.querySelector('#dreamroom');
+  if (dreamRoom) {
     const tl = gsap.timeline({
-      scrollTrigger: { trigger: region, start: 'top 80%', once: true },
+      scrollTrigger: { trigger: dreamRoom, start: 'top 80%', once: true },
     });
-    tl.from(region.querySelector('.region-header'), {
-      opacity: 0, x: -30, duration: 0.9, ease: 'power3.out',
+    tl.from(dreamRoom.querySelector('.section-heading'), {
+      opacity: 0, y: 26, duration: 0.9, ease: 'power3.out',
     });
-    const cards = region.querySelectorAll('.institution');
-    if (cards.length) {
-      tl.from(cards, {
-        opacity: 0, y: 40, scale: 0.94, duration: 0.9,
-        stagger: 0.15, ease: 'power3.out',
+    const dreamImages = dreamRoom.querySelectorAll('.dream-room-image');
+    if (dreamImages.length) {
+      tl.from(dreamImages, {
+        opacity: 0, y: 32, scale: 0.96, duration: 1.0,
+        stagger: 0.18, ease: 'power3.out',
       }, '-=0.5');
     }
-  });
-
-  // Host benediction — rises and gently scales in.
-  const host = document.querySelector('.host-acknowledgement');
-  if (host) {
-    gsap.from(host, {
-      scrollTrigger: { trigger: host, start: 'top 84%', once: true },
-      opacity: 0, y: 40, scale: 0.96, duration: 1.2, ease: 'power3.out',
-    });
+    const dreamBody = dreamRoom.querySelectorAll('.dream-room-body p');
+    if (dreamBody.length) {
+      tl.from(dreamBody, {
+        opacity: 0, y: 22, duration: 0.8, stagger: 0.1, ease: 'power3.out',
+      }, '-=0.55');
+    }
   }
 
   // Convenor — heading rises first (DOM order: heading → figure → body),
