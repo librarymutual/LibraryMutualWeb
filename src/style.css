@@ -1836,3 +1836,71 @@ body.ack-page {
   .hero-slide.active { opacity: 1; }
   .hero-tagline, .hero-closing { opacity: 1; }
 }
+
+/* ── The Ontology Map embed ── */
+.ontology-embed {
+  background:
+    radial-gradient(ellipse at top left, rgba(107, 77, 46, 0.06), transparent 55%),
+    radial-gradient(ellipse at bottom right, rgba(110, 46, 40, 0.05), transparent 55%),
+    var(--bg-warm);
+  padding: 4rem var(--gutter);
+}
+.ontology-embed-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+.ontology-embed-rule {
+  border: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--gilt), transparent);
+  margin: 0 0 2.5rem;
+  opacity: 0.85;
+}
+.ontology-embed-rule-bottom { margin: 2.5rem 0 0; }
+.ontology-embed-lede {
+  max-width: 44rem;
+  font-size: 1.1rem;
+  line-height: 1.75;
+  color: var(--ink-2);
+  margin: 0 0 2rem;
+}
+.ontology-embed-frame {
+  overflow: auto;
+  resize: both;
+  border: 1px solid #d8ccb4;
+  border-radius: 4px;
+  min-height: 520px;
+  height: 80vh;
+  background: #faf9f5;
+  box-shadow: 0 12px 36px var(--shadow);
+}
+.ontology-embed-frame iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+.ontology-embed-link {
+  margin: 1.25rem 0 0;
+  font-size: 0.95rem;
+}
+.ontology-embed-link a {
+  color: var(--oxblood);
+  text-decoration: none;
+  border-bottom: 1px solid color-mix(in srgb, var(--oxblood) 35%, transparent);
+  padding-bottom: 1px;
+  transition: border-color 0.2s ease;
+}
+.ontology-embed-link a:hover,
+.ontology-embed-link a:focus-visible {
+  border-bottom-color: var(--oxblood);
+}
+
+@media (max-width: 700px) {
+  .ontology-embed { padding: 3rem var(--gutter); }
+  .ontology-embed-frame {
+    height: 70vh;
+    min-height: 420px;
+    resize: vertical;
+  }
+}

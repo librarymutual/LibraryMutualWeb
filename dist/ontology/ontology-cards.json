@@ -1,0 +1,269 @@
+{
+  "cards": {
+    "mutual": {
+      "label": "THE DOOR IN · WHO GOVERNS",
+      "title": "The Library Mutual",
+      "summary": "A cooperative whose members are libraries and the people they serve — the body that governs and votes. It holds in common the one thing worth holding: the accountable authority to connect facts into conclusions.",
+      "points": [
+        "Members: public & academic libraries, standards bodies, research institutions — and their patrons",
+        "Publishers and big tech get a seat at the table, never a vote on the rules",
+        "Vote-weighting between metro systems and small districts is still open",
+        "Inclusion is by values alignment to the public-library ethos"
+      ],
+      "links": [
+        { "label": "Read the canonical v3 document", "url": "https://docs.google.com/document/d/1Dzo-PTHpFDbxTOmx1jDVx2bfnPKAOvu9OUGyNHo1MCc/edit" },
+        { "label": "Mutual Capital Company — the legal vessel", "url": "https://docs.google.com/document/d/1nG0lo9_WeaA0lVEZNyuRbBQXnGZAqOc7RyoKYaRjn4w/edit" }
+      ]
+    },
+    "commons": {
+      "label": "WHAT IS HELD",
+      "title": "The Meaning Commons",
+      "summary": "The shared, un-fenced body of trustworthy knowledge the Mutual exists to protect and tend. The asset worth holding isn't the facts — those can be open to all — but the authority to make connections.",
+      "points": [
+        "Facts are open; the governed asset is the accountable connection",
+        "A healthy Commons steadily retires disagreements through real work",
+        "Findings are added back as first-class knowledge objects"
+      ],
+      "links": [
+        { "label": "Read the canonical v3 document", "url": "https://docs.google.com/document/d/1Dzo-PTHpFDbxTOmx1jDVx2bfnPKAOvu9OUGyNHo1MCc/edit" }
+      ]
+    },
+    "miso": {
+      "label": "HOW IT WORKS",
+      "title": "MISO — Multidimensional Intelligent Semantic Object",
+      "summary": "The underlying technology — mostly invisible, like the plumbing protocol behind a tap. Every MISO is secure by design, already post-quantum cryptographically secure, carrying its own provenance and value-flow.",
+      "points": [
+        "Carries provenance, credibility, history, and value-flow within itself",
+        "A Finding is itself a first-class MISO",
+        "Secure by design — post-quantum from the start"
+      ],
+      "links": [
+        { "label": "MISO & Commons — White Paper", "url": "https://docs.google.com/document/d/1wH-tsW23qB2aP99Dn2CFEAkXfEYBZ1Gv/edit?usp=sharing" },
+        { "label": "Read the canonical v3 document", "url": "https://docs.google.com/document/d/1Dzo-PTHpFDbxTOmx1jDVx2bfnPKAOvu9OUGyNHo1MCc/edit" }
+      ]
+    },
+    "ethos": {
+      "label": "A GROUNDING ETHOS",
+      "title": "Knowledge offered as gift, held in interdependence",
+      "summary": "Before there was economy, there was gift. The Earth's conditions for life were given, not earned — and every act of knowledge rests on that first offering. Contribution to the Commons is understood first as a gift; attribution and reciprocity exist to honor it, not to motivate it.",
+      "points": [
+        "Acknowledgement of Country: offered from Bundjalung Country, land of the Goodjingburra clan",
+        "Aunty Dr Mary Graham AM's two axioms: the Land is the Law, and You Are Not Alone in the World",
+        "Pratityasamutpada — interdependent co-arising: nothing arises independently",
+        "Set within Joanna Macy's Great Turning, with compassion as the operative ethic",
+        "Indigenous knowledge carried forward only on its custodians' terms — consent living, attribution non-severable"
+      ],
+      "links": [
+        { "label": "MISO White Paper — Acknowledgement & Preamble", "url": "https://docs.google.com/document/d/1wH-tsW23qB2aP99Dn2CFEAkXfEYBZ1Gv/edit?usp=sharing" },
+        { "label": "The Civilizing Role — manifesto", "url": "https://docs.google.com/document/d/1eZmScOFQOqCFZmH2qcWU0UBx00RgmP1yDzfyLPkzW80/edit" }
+      ]
+    },
+    "civ": {
+      "label": "DEFINES WHAT THE MUTUAL DOES",
+      "title": "The Civilizing Role",
+      "summary": "The founding manifesto — six concrete roles libraries are uniquely positioned to play in the age of AI. These define much of what the Library Mutual actually does in the world.",
+      "points": [
+        "Libraries cultivate judgment, not just deliver results",
+        "Six roles, from identity to the global alliance",
+        "Knowledge as gift, not commodity"
+      ],
+      "links": [
+        { "label": "The Civilizing Role — manifesto", "url": "https://docs.google.com/document/d/1eZmScOFQOqCFZmH2qcWU0UBx00RgmP1yDzfyLPkzW80/edit" }
+      ]
+    },
+    "n3": {
+      "label": "§3 · ROLE 01",
+      "title": "Identity Without Surveillance",
+      "summary": "The Proof of Human Library ID — a two-tier, non-surveillance credential. Each district holds a global identifier; each member a unique identifier within it. Enough to participate; never enough to track.",
+      "points": [
+        "A deliberate counter to iris-scanning and biometric identity systems",
+        "Three modes: fully identified, verified-but-pseudonymous, anonymous",
+        "Custodian of the container, not the contents — keys stay with the member",
+        "1.1 billion library cards already exist (IFLA)"
+      ],
+      "links": [
+        { "label": "Read §3 in the manifesto", "url": "https://docs.google.com/document/d/1eZmScOFQOqCFZmH2qcWU0UBx00RgmP1yDzfyLPkzW80/edit" }
+      ]
+    },
+    "n4": {
+      "label": "§4 · ROLE 02",
+      "title": "Curator of Knowledge Objects",
+      "summary": "A new unit of stewardship for the AI age: the MISO — a knowledge object that carries its own provenance, credibility, version history, and terms of use, rather than a flat file stripped of context.",
+      "points": [
+        "Library-branded AI lenses: “answer using the Arapahoe lens”",
+        "BiblioBoard / Lyrasis infrastructure already operational",
+        "Domain knowledge modules for sovereign devices",
+        "Curated corpora: 2–3 orders of magnitude more compute-efficient"
+      ],
+      "links": [
+        { "label": "MISO & Commons — White Paper", "url": "https://docs.google.com/document/d/1wH-tsW23qB2aP99Dn2CFEAkXfEYBZ1Gv/edit?usp=sharing" },
+        { "label": "Read §4 in the manifesto", "url": "https://docs.google.com/document/d/1eZmScOFQOqCFZmH2qcWU0UBx00RgmP1yDzfyLPkzW80/edit" }
+      ]
+    },
+    "n5": {
+      "label": "§5 · ROLE 03",
+      "title": "Founding the Knowledge Commons",
+      "summary": "Libraries as founding members of an MISO Mutual Capital Company — an Australian cooperative form that raises external capital without surrendering member control. Capital is welcomed as a guest, not a master.",
+      "points": [
+        "Activating institution: Arapahoe Libraries, with Toronto Public Library",
+        "Australian partners constitutive: Trove, State Library Victoria",
+        "Six dimensions of value (Syntropic World), not one financial metric",
+        "Membership becomes citizenship in the commons"
+      ],
+      "links": [
+        { "label": "Mutual Capital Company — companion document", "url": "https://docs.google.com/document/d/1nG0lo9_WeaA0lVEZNyuRbBQXnGZAqOc7RyoKYaRjn4w/edit" },
+        { "label": "Read §5 in the manifesto", "url": "https://docs.google.com/document/d/1eZmScOFQOqCFZmH2qcWU0UBx00RgmP1yDzfyLPkzW80/edit" }
+      ]
+    },
+    "n6": {
+      "label": "§6 · ROLE 04",
+      "title": "The Homebrew AI Cohort",
+      "summary": "A community of practice at every library where self-sovereign AI devices are assembled, maintained, repaired, and upgraded — the Homebrew Computer Club pattern, made civic and local.",
+      "points": [
+        "Right-to-repair momentum; library makerspaces already in place",
+        "Four owner-replaceable layers: LLM chip, domain modules, archive, orchestration",
+        "Kit assembly as the most concrete digital-literacy program imaginable"
+      ],
+      "links": [
+        { "label": "Sovereign Device Architecture — companion document", "url": "https://docs.google.com/document/d/1vOmd86RFP1WeLdeM1NibW0zZaFfLPcDebrI446ElLpU/edit" },
+        { "label": "Read §6 in the manifesto", "url": "https://docs.google.com/document/d/1eZmScOFQOqCFZmH2qcWU0UBx00RgmP1yDzfyLPkzW80/edit" }
+      ]
+    },
+    "n7": {
+      "label": "§7 · ROLE 05",
+      "title": "Backup Steward of the Archive",
+      "summary": "The library as air-gapped, physical custodian of members' encrypted personal archives — steward of ciphertext, never of keys. And, when the backbone fails, the community's communications lighthouse.",
+      "points": [
+        "Monthly air-gapped backup; post-quantum encryption",
+        "Split-key escrow: library, solicitor, family member",
+        "Mesh, medium-range radio, HF shortwave — graceful degradation",
+        "A fundable, mission-aligned new civic role"
+      ],
+      "links": [
+        { "label": "Sovereign Device Architecture — companion document", "url": "https://docs.google.com/document/d/1vOmd86RFP1WeLdeM1NibW0zZaFfLPcDebrI446ElLpU/edit" },
+        { "label": "Read §7 in the manifesto", "url": "https://docs.google.com/document/d/1eZmScOFQOqCFZmH2qcWU0UBx00RgmP1yDzfyLPkzW80/edit" }
+      ]
+    },
+    "n8": {
+      "label": "§8 · ROLE 06",
+      "title": "The Global Library Alliance",
+      "summary": "A trans-oceanic alliance already in relationship — Arapahoe, Toronto, State Library Victoria — sitting naturally within a middle-powers alignment of Canada, Australia, and India.",
+      "points": [
+        "Universal Library District IDs as the connective tissue",
+        "Each library a complete node: seven roles in one",
+        "The Internet Archive as a natural institutional ally",
+        "Erasmus.AI and ClimateGPT as the first domain use cases"
+      ],
+      "links": [
+        { "label": "Read §8 in the manifesto", "url": "https://docs.google.com/document/d/1eZmScOFQOqCFZmH2qcWU0UBx00RgmP1yDzfyLPkzW80/edit" }
+      ]
+    },
+    "fluency": {
+      "label": "STEP 01 · THE FLUENCY LAYER",
+      "title": "The Fluency Layer",
+      "summary": "A frontier model — the “gift of the gab” — cleans an everyday question into a clear, well-formed version. Its job is to understand faithfully, never to quietly decide what you meant. Genuine ambiguity is kept, not guessed away.",
+      "points": [],
+      "links": [
+        { "label": "Read the canonical v3 document", "url": "https://docs.google.com/document/d/1Dzo-PTHpFDbxTOmx1jDVx2bfnPKAOvu9OUGyNHo1MCc/edit" }
+      ]
+    },
+    "reasoning": {
+      "label": "STEP 02 · THE REASONING ENGINE",
+      "title": "The Reasoning Engine",
+      "summary": "The part that actually reasons: it walks the trustworthy connections in the Meaning Commons and assembles a justified answer — working only with governed, accountable knowledge, never the AI's own guesswork.",
+      "points": [],
+      "links": [
+        { "label": "Read the canonical v3 document", "url": "https://docs.google.com/document/d/1Dzo-PTHpFDbxTOmx1jDVx2bfnPKAOvu9OUGyNHo1MCc/edit" }
+      ]
+    },
+    "finding": {
+      "label": "STEP 03 · THE FINDING",
+      "title": "The Finding",
+      "summary": "A complete, justified answer that carries its own evidence, its named-and-sourced connections, an honest confidence level, and any disagreements left open. Built to be handed forward — and itself a first-class MISO added to the Commons.",
+      "points": [],
+      "links": [
+        { "label": "Read the canonical v3 document", "url": "https://docs.google.com/document/d/1Dzo-PTHpFDbxTOmx1jDVx2bfnPKAOvu9OUGyNHo1MCc/edit" }
+      ]
+    },
+    "herald": {
+      "label": "STEP 04 · THE HERALD",
+      "title": "The Herald",
+      "summary": "The system's voice, delivering the Finding in plain, confident language. The locked rule: it may only say what it can trace. If it can't trace an answer to real evidence and real connections, it says so rather than bluffing.",
+      "points": [],
+      "links": [
+        { "label": "Read the canonical v3 document", "url": "https://docs.google.com/document/d/1Dzo-PTHpFDbxTOmx1jDVx2bfnPKAOvu9OUGyNHo1MCc/edit" }
+      ]
+    },
+    "leaps": {
+      "label": "THE CORE INSIGHT",
+      "title": "Leaps, not facts",
+      "summary": "Conclusions are stepping stones across a river: the stones are facts, the gaps are the leaps. The reasoning was never in the facts — it was always in the leaps. Every connection is treated as a statement someone is responsible for.",
+      "points": [
+        "See where a conclusion is strong — and where it leans on a weak join",
+        "When experts disagree, the disagreement is held open, not smoothed away",
+        "This authority to connect is precisely what the cooperative governs"
+      ],
+      "links": [
+        { "label": "Read the canonical v3 document", "url": "https://docs.google.com/document/d/1Dzo-PTHpFDbxTOmx1jDVx2bfnPKAOvu9OUGyNHo1MCc/edit" }
+      ]
+    },
+    "park": {
+      "label": "THE MORAL SPINE",
+      "title": "Stop and park for a human",
+      "summary": "Autonomous machine reasoning has a hard ceiling. On consequential matters where genuine disagreement remains, the system pulls over, hazard lights on, and waits for a person — and the wait has no timer. Parked means parked until someone genuinely engages.",
+      "points": [
+        "Three options, set in advance: stop and ask, proceed on the record, or refuse",
+        "A deadline that lets the machine proceed is the old failure in disguise",
+        "If a use can't tolerate the wait, it shouldn't be automated at all"
+      ],
+      "links": [
+        { "label": "Read the canonical v3 document", "url": "https://docs.google.com/document/d/1Dzo-PTHpFDbxTOmx1jDVx2bfnPKAOvu9OUGyNHo1MCc/edit" }
+      ]
+    },
+    "dv3": {
+      "label": "CANONICAL · VERSION 3",
+      "title": "The Library Mutual & The Meaning Commons",
+      "summary": "The board-level account that settles the language and governance: three names (Commons, Mutual, MISO), the “leaps not facts” insight, the Herald, and the stop-and-park spine.",
+      "points": [],
+      "links": [
+        { "label": "Open the v3 document", "url": "https://docs.google.com/document/d/1Dzo-PTHpFDbxTOmx1jDVx2bfnPKAOvu9OUGyNHo1MCc/edit" }
+      ]
+    },
+    "dman": {
+      "label": "FOUNDATIONAL DOCUMENT",
+      "title": "The Civilizing Role of Libraries in the Ages of AI",
+      "summary": "The manifesto: six concrete roles libraries play in the AI age, and the invitation to library districts worldwide. Predates the v3 governance language and is due a refining pass.",
+      "points": [],
+      "links": [
+        { "label": "Open the manifesto", "url": "https://docs.google.com/document/d/1eZmScOFQOqCFZmH2qcWU0UBx00RgmP1yDzfyLPkzW80/edit" }
+      ]
+    },
+    "dmiso": {
+      "label": "TECHNICAL WHITE PAPER",
+      "title": "MISO & Commons — White Paper",
+      "summary": "The full technical and philosophical account: the Acknowledgement of Country, the gift-and-interdependence Preamble, the MISO definition, attribution spectrum, crypto-native infrastructure, and the Commons registry.",
+      "points": [],
+      "links": [
+        { "label": "Open the MISO White Paper", "url": "https://docs.google.com/document/d/1wH-tsW23qB2aP99Dn2CFEAkXfEYBZ1Gv/edit?usp=sharing" }
+      ]
+    },
+    "dmcc": {
+      "label": "COMPANION DOCUMENT",
+      "title": "Mutual Capital Company",
+      "summary": "The Australian cooperative legal form that lets the commons raise growth capital without demutualisation — governance stays with members.",
+      "points": [],
+      "links": [
+        { "label": "Open the MCC document", "url": "https://docs.google.com/document/d/1nG0lo9_WeaA0lVEZNyuRbBQXnGZAqOc7RyoKYaRjn4w/edit" }
+      ]
+    },
+    "dsda": {
+      "label": "COMPANION DOCUMENT",
+      "title": "Sovereign Device Architecture",
+      "summary": "Personal AI devices owned, controlled, and upgraded by the individual — four owner-replaceable layers, with the personal archive sovereign and encrypted on a card the owner physically holds.",
+      "points": [],
+      "links": [
+        { "label": "Open the SDA document", "url": "https://docs.google.com/document/d/1vOmd86RFP1WeLdeM1NibW0zZaFfLPcDebrI446ElLpU/edit" }
+      ]
+    }
+  }
+}
