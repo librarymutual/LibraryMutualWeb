@@ -1,5 +1,5 @@
 /* ───────────────────────────────────────────────────────────
-   thelibraryai.org — preview & invitation site
+   librarymutual.org — The Library Mutual invitation site
    Voice: institutional, civic, editorial. Parchment + ink.
    ─────────────────────────────────────────────────────────── */
 
@@ -128,8 +128,8 @@ nav.site-nav.is-scrolled {
   letter-spacing: 0.01em;
   text-decoration: none;
 }
-.nav-wordmark em {
-  font-style: italic;
+.nav-wordmark strong {
+  font-weight: 700;
   color: var(--accent);
 }
 .nav-links {

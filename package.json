@@ -1,9 +1,9 @@
 {
-  "name": "library-ai-alliance",
+  "name": "library-mutual-web",
   "private": true,
   "version": "0.1.0",
   "type": "module",
-  "description": "The Library Alliance for Curated AI — landing site.",
+  "description": "The Library Mutual — invitation site (librarymutual.org).",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

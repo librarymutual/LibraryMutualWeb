@@ -726,7 +726,7 @@ if (briefingForm && briefingConfirm) {
     } catch (err) {
       stopSendingPulse();
       showError(
-        'Sorry — we could not submit your request. Please email briefing@thelibraryai.org instead.',
+        'Sorry — we could not submit your request. Please email briefing@librarymutual.org instead.',
       );
       if (submitButton) {
         submitButton.disabled = false;
