@@ -42,6 +42,21 @@
         { "label": "Read the canonical v3 document", "url": "https://docs.google.com/document/d/1Dzo-PTHpFDbxTOmx1jDVx2bfnPKAOvu9OUGyNHo1MCc/edit" }
       ]
     },
+    "guild": {
+      "label": "WHO WEAVES THE MEANING",
+      "title": "The Wisdom Weaving Guild",
+      "summary": "A new civic profession — practitioners who compose Findings by weaving threads of fact into defensible, contestable narratives. Where the machine lays down only the threads it can account for, the Weaver composes the tapestry they make. The Guild holds the human judgment that machines structurally cannot — and is portable enough to seed in university curricula or any knowledge commons, even where the Mutual or MISOs have not yet arrived.",
+      "points": [
+        "Three ranked-equal roles in tensegrity: Postulant, Journeyer, Elder",
+        "Membership earned by demonstrated alignment with the Guild's ethos, not credentials",
+        "Publishes Findings into the Meaning Commons as first-class MISOs",
+        "Inherits the library custodial tradition; honors Aunty Dr Mary Graham AM's principle that knowing carries an obligation of care",
+        "A tapestry shows its structure where a generated image hides its seams"
+      ],
+      "links": [
+        { "label": "Wisdom Weaving Guild — concept document", "url": "https://docs.google.com/document/d/1Wy72qrBe4mUGgV6-clgiT5SB_hVeURQrtXuXtShiS2Q/edit?usp=sharing" }
+      ]
+    },
     "ethos": {
       "label": "A GROUNDING ETHOS",
       "title": "Knowledge offered as gift, held in interdependence",

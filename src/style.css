@@ -123,14 +123,16 @@ nav.site-nav.is-scrolled {
 .nav-wordmark {
   font-family: var(--serif-display);
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 400;
   color: var(--ink);
   letter-spacing: 0.01em;
   text-decoration: none;
 }
 .nav-wordmark strong {
-  font-weight: 700;
+  font-weight: 800;
+  font-size: 1.08em;
   color: var(--accent);
+  letter-spacing: 0.02em;
 }
 .nav-links {
   display: flex;
