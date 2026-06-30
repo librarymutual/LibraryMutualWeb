@@ -11,8 +11,14 @@
         "Inclusion is by values alignment to the public-library ethos"
       ],
       "links": [
-        { "label": "Read the canonical v3 document", "url": "https://docs.google.com/document/d/1Dzo-PTHpFDbxTOmx1jDVx2bfnPKAOvu9OUGyNHo1MCc/edit" },
-        { "label": "Mutual Capital Company — the legal vessel", "url": "https://docs.google.com/document/d/1nG0lo9_WeaA0lVEZNyuRbBQXnGZAqOc7RyoKYaRjn4w/edit" }
+        {
+          "label": "Read the canonical v3 document",
+          "url": "https://docs.google.com/document/d/1Dzo-PTHpFDbxTOmx1jDVx2bfnPKAOvu9OUGyNHo1MCc/edit"
+        },
+        {
+          "label": "Mutual Capital Company — the legal vessel",
+          "url": "https://docs.google.com/document/d/1nG0lo9_WeaA0lVEZNyuRbBQXnGZAqOc7RyoKYaRjn4w/edit"
+        }
       ]
     },
     "commons": {
@@ -25,7 +31,10 @@
         "Findings are added back as first-class knowledge objects"
       ],
       "links": [
-        { "label": "Read the canonical v3 document", "url": "https://docs.google.com/document/d/1Dzo-PTHpFDbxTOmx1jDVx2bfnPKAOvu9OUGyNHo1MCc/edit" }
+        {
+          "label": "Read the canonical v3 document",
+          "url": "https://docs.google.com/document/d/1Dzo-PTHpFDbxTOmx1jDVx2bfnPKAOvu9OUGyNHo1MCc/edit"
+        }
       ]
     },
     "miso": {
@@ -38,8 +47,14 @@
         "Secure by design — post-quantum from the start"
       ],
       "links": [
-        { "label": "MISO & Commons — White Paper", "url": "https://docs.google.com/document/d/1wH-tsW23qB2aP99Dn2CFEAkXfEYBZ1Gv/edit?usp=sharing" },
-        { "label": "Read the canonical v3 document", "url": "https://docs.google.com/document/d/1Dzo-PTHpFDbxTOmx1jDVx2bfnPKAOvu9OUGyNHo1MCc/edit" }
+        {
+          "label": "MISO & Commons — White Paper",
+          "url": "https://docs.google.com/document/d/1wH-tsW23qB2aP99Dn2CFEAkXfEYBZ1Gv/edit?usp=sharing"
+        },
+        {
+          "label": "Read the canonical v3 document",
+          "url": "https://docs.google.com/document/d/1Dzo-PTHpFDbxTOmx1jDVx2bfnPKAOvu9OUGyNHo1MCc/edit"
+        }
       ]
     },
     "guild": {
@@ -54,7 +69,10 @@
         "A tapestry shows its structure where a generated image hides its seams"
       ],
       "links": [
-        { "label": "Wisdom Weaving Guild — concept document", "url": "https://docs.google.com/document/d/1Wy72qrBe4mUGgV6-clgiT5SB_hVeURQrtXuXtShiS2Q/edit?usp=sharing" }
+        {
+          "label": "Wisdom Weaving Guild — concept document",
+          "url": "https://docs.google.com/document/d/1Wy72qrBe4mUGgV6-clgiT5SB_hVeURQrtXuXtShiS2Q/edit?usp=sharing"
+        }
       ]
     },
     "ethos": {
@@ -69,8 +87,14 @@
         "Indigenous knowledge carried forward only on its custodians' terms — consent living, attribution non-severable"
       ],
       "links": [
-        { "label": "MISO White Paper — Acknowledgement & Preamble", "url": "https://docs.google.com/document/d/1wH-tsW23qB2aP99Dn2CFEAkXfEYBZ1Gv/edit?usp=sharing" },
-        { "label": "The Civilizing Role — manifesto", "url": "https://docs.google.com/document/d/1eZmScOFQOqCFZmH2qcWU0UBx00RgmP1yDzfyLPkzW80/edit" }
+        {
+          "label": "MISO White Paper — Acknowledgement & Preamble",
+          "url": "https://docs.google.com/document/d/1wH-tsW23qB2aP99Dn2CFEAkXfEYBZ1Gv/edit?usp=sharing"
+        },
+        {
+          "label": "The Civilizing Role — manifesto",
+          "url": "https://docs.google.com/document/d/1eZmScOFQOqCFZmH2qcWU0UBx00RgmP1yDzfyLPkzW80/edit"
+        }
       ]
     },
     "civ": {
@@ -83,7 +107,10 @@
         "Knowledge as gift, not commodity"
       ],
       "links": [
-        { "label": "The Civilizing Role — manifesto", "url": "https://docs.google.com/document/d/1eZmScOFQOqCFZmH2qcWU0UBx00RgmP1yDzfyLPkzW80/edit" }
+        {
+          "label": "The Civilizing Role — manifesto",
+          "url": "https://docs.google.com/document/d/1eZmScOFQOqCFZmH2qcWU0UBx00RgmP1yDzfyLPkzW80/edit"
+        }
       ]
     },
     "n3": {
@@ -97,7 +124,10 @@
         "1.1 billion library cards already exist (IFLA)"
       ],
       "links": [
-        { "label": "Read §3 in the manifesto", "url": "https://docs.google.com/document/d/1eZmScOFQOqCFZmH2qcWU0UBx00RgmP1yDzfyLPkzW80/edit" }
+        {
+          "label": "Read §3 in the manifesto",
+          "url": "https://docs.google.com/document/d/1eZmScOFQOqCFZmH2qcWU0UBx00RgmP1yDzfyLPkzW80/edit"
+        }
       ]
     },
     "n4": {
@@ -111,8 +141,14 @@
         "Curated corpora: 2–3 orders of magnitude more compute-efficient"
       ],
       "links": [
-        { "label": "MISO & Commons — White Paper", "url": "https://docs.google.com/document/d/1wH-tsW23qB2aP99Dn2CFEAkXfEYBZ1Gv/edit?usp=sharing" },
-        { "label": "Read §4 in the manifesto", "url": "https://docs.google.com/document/d/1eZmScOFQOqCFZmH2qcWU0UBx00RgmP1yDzfyLPkzW80/edit" }
+        {
+          "label": "MISO & Commons — White Paper",
+          "url": "https://docs.google.com/document/d/1wH-tsW23qB2aP99Dn2CFEAkXfEYBZ1Gv/edit?usp=sharing"
+        },
+        {
+          "label": "Read §4 in the manifesto",
+          "url": "https://docs.google.com/document/d/1eZmScOFQOqCFZmH2qcWU0UBx00RgmP1yDzfyLPkzW80/edit"
+        }
       ]
     },
     "n5": {
@@ -126,8 +162,14 @@
         "Membership becomes citizenship in the commons"
       ],
       "links": [
-        { "label": "Mutual Capital Company — companion document", "url": "https://docs.google.com/document/d/1nG0lo9_WeaA0lVEZNyuRbBQXnGZAqOc7RyoKYaRjn4w/edit" },
-        { "label": "Read §5 in the manifesto", "url": "https://docs.google.com/document/d/1eZmScOFQOqCFZmH2qcWU0UBx00RgmP1yDzfyLPkzW80/edit" }
+        {
+          "label": "Mutual Capital Company — companion document",
+          "url": "https://docs.google.com/document/d/1nG0lo9_WeaA0lVEZNyuRbBQXnGZAqOc7RyoKYaRjn4w/edit"
+        },
+        {
+          "label": "Read §5 in the manifesto",
+          "url": "https://docs.google.com/document/d/1eZmScOFQOqCFZmH2qcWU0UBx00RgmP1yDzfyLPkzW80/edit"
+        }
       ]
     },
     "n6": {
@@ -140,8 +182,14 @@
         "Kit assembly as the most concrete digital-literacy program imaginable"
       ],
       "links": [
-        { "label": "Sovereign Device Architecture — companion document", "url": "https://docs.google.com/document/d/1vOmd86RFP1WeLdeM1NibW0zZaFfLPcDebrI446ElLpU/edit" },
-        { "label": "Read §6 in the manifesto", "url": "https://docs.google.com/document/d/1eZmScOFQOqCFZmH2qcWU0UBx00RgmP1yDzfyLPkzW80/edit" }
+        {
+          "label": "Sovereign Device Architecture — companion document",
+          "url": "https://docs.google.com/document/d/1vOmd86RFP1WeLdeM1NibW0zZaFfLPcDebrI446ElLpU/edit"
+        },
+        {
+          "label": "Read §6 in the manifesto",
+          "url": "https://docs.google.com/document/d/1eZmScOFQOqCFZmH2qcWU0UBx00RgmP1yDzfyLPkzW80/edit"
+        }
       ]
     },
     "n7": {
@@ -155,14 +203,20 @@
         "A fundable, mission-aligned new civic role"
       ],
       "links": [
-        { "label": "Sovereign Device Architecture — companion document", "url": "https://docs.google.com/document/d/1vOmd86RFP1WeLdeM1NibW0zZaFfLPcDebrI446ElLpU/edit" },
-        { "label": "Read §7 in the manifesto", "url": "https://docs.google.com/document/d/1eZmScOFQOqCFZmH2qcWU0UBx00RgmP1yDzfyLPkzW80/edit" }
+        {
+          "label": "Sovereign Device Architecture — companion document",
+          "url": "https://docs.google.com/document/d/1vOmd86RFP1WeLdeM1NibW0zZaFfLPcDebrI446ElLpU/edit"
+        },
+        {
+          "label": "Read §7 in the manifesto",
+          "url": "https://docs.google.com/document/d/1eZmScOFQOqCFZmH2qcWU0UBx00RgmP1yDzfyLPkzW80/edit"
+        }
       ]
     },
     "n8": {
       "label": "§8 · ROLE 06",
       "title": "The Global Library Alliance",
-      "summary": "A trans-oceanic alliance already in relationship — Arapahoe, Toronto, State Library Victoria — sitting naturally within a middle-powers alignment of Canada, Australia, and India.",
+      "summary": "A trans-oceanic alliance already in relationship — Arapahoe Library District, Denver Public Library, Toronto Library, State Library Victoria in Melbourne — sitting naturally within a middle-powers alignment of Canada, Australia, and India.",
       "points": [
         "Universal Library District IDs as the connective tissue",
         "Each library a complete node: seven roles in one",
@@ -170,7 +224,10 @@
         "Erasmus.AI and ClimateGPT as the first domain use cases"
       ],
       "links": [
-        { "label": "Read §8 in the manifesto", "url": "https://docs.google.com/document/d/1eZmScOFQOqCFZmH2qcWU0UBx00RgmP1yDzfyLPkzW80/edit" }
+        {
+          "label": "Read §8 in the manifesto",
+          "url": "https://docs.google.com/document/d/1eZmScOFQOqCFZmH2qcWU0UBx00RgmP1yDzfyLPkzW80/edit"
+        }
       ]
     },
     "fluency": {
@@ -179,7 +236,10 @@
       "summary": "A frontier model — the “gift of the gab” — cleans an everyday question into a clear, well-formed version. Its job is to understand faithfully, never to quietly decide what you meant. Genuine ambiguity is kept, not guessed away.",
       "points": [],
       "links": [
-        { "label": "Read the canonical v3 document", "url": "https://docs.google.com/document/d/1Dzo-PTHpFDbxTOmx1jDVx2bfnPKAOvu9OUGyNHo1MCc/edit" }
+        {
+          "label": "Read the canonical v3 document",
+          "url": "https://docs.google.com/document/d/1Dzo-PTHpFDbxTOmx1jDVx2bfnPKAOvu9OUGyNHo1MCc/edit"
+        }
       ]
     },
     "reasoning": {
@@ -188,7 +248,10 @@
       "summary": "The part that actually reasons: it walks the trustworthy connections in the Meaning Commons and assembles a justified answer — working only with governed, accountable knowledge, never the AI's own guesswork.",
       "points": [],
       "links": [
-        { "label": "Read the canonical v3 document", "url": "https://docs.google.com/document/d/1Dzo-PTHpFDbxTOmx1jDVx2bfnPKAOvu9OUGyNHo1MCc/edit" }
+        {
+          "label": "Read the canonical v3 document",
+          "url": "https://docs.google.com/document/d/1Dzo-PTHpFDbxTOmx1jDVx2bfnPKAOvu9OUGyNHo1MCc/edit"
+        }
       ]
     },
     "finding": {
@@ -197,7 +260,10 @@
       "summary": "A complete, justified answer that carries its own evidence, its named-and-sourced connections, an honest confidence level, and any disagreements left open. Built to be handed forward — and itself a first-class MISO added to the Commons.",
       "points": [],
       "links": [
-        { "label": "Read the canonical v3 document", "url": "https://docs.google.com/document/d/1Dzo-PTHpFDbxTOmx1jDVx2bfnPKAOvu9OUGyNHo1MCc/edit" }
+        {
+          "label": "Read the canonical v3 document",
+          "url": "https://docs.google.com/document/d/1Dzo-PTHpFDbxTOmx1jDVx2bfnPKAOvu9OUGyNHo1MCc/edit"
+        }
       ]
     },
     "herald": {
@@ -206,7 +272,10 @@
       "summary": "The system's voice, delivering the Finding in plain, confident language. The locked rule: it may only say what it can trace. If it can't trace an answer to real evidence and real connections, it says so rather than bluffing.",
       "points": [],
       "links": [
-        { "label": "Read the canonical v3 document", "url": "https://docs.google.com/document/d/1Dzo-PTHpFDbxTOmx1jDVx2bfnPKAOvu9OUGyNHo1MCc/edit" }
+        {
+          "label": "Read the canonical v3 document",
+          "url": "https://docs.google.com/document/d/1Dzo-PTHpFDbxTOmx1jDVx2bfnPKAOvu9OUGyNHo1MCc/edit"
+        }
       ]
     },
     "leaps": {
@@ -219,7 +288,10 @@
         "This authority to connect is precisely what the cooperative governs"
       ],
       "links": [
-        { "label": "Read the canonical v3 document", "url": "https://docs.google.com/document/d/1Dzo-PTHpFDbxTOmx1jDVx2bfnPKAOvu9OUGyNHo1MCc/edit" }
+        {
+          "label": "Read the canonical v3 document",
+          "url": "https://docs.google.com/document/d/1Dzo-PTHpFDbxTOmx1jDVx2bfnPKAOvu9OUGyNHo1MCc/edit"
+        }
       ]
     },
     "park": {
@@ -232,7 +304,10 @@
         "If a use can't tolerate the wait, it shouldn't be automated at all"
       ],
       "links": [
-        { "label": "Read the canonical v3 document", "url": "https://docs.google.com/document/d/1Dzo-PTHpFDbxTOmx1jDVx2bfnPKAOvu9OUGyNHo1MCc/edit" }
+        {
+          "label": "Read the canonical v3 document",
+          "url": "https://docs.google.com/document/d/1Dzo-PTHpFDbxTOmx1jDVx2bfnPKAOvu9OUGyNHo1MCc/edit"
+        }
       ]
     },
     "dv3": {
@@ -241,7 +316,10 @@
       "summary": "The board-level account that settles the language and governance: three names (Commons, Mutual, MISO), the “leaps not facts” insight, the Herald, and the stop-and-park spine.",
       "points": [],
       "links": [
-        { "label": "Open the v3 document", "url": "https://docs.google.com/document/d/1Dzo-PTHpFDbxTOmx1jDVx2bfnPKAOvu9OUGyNHo1MCc/edit" }
+        {
+          "label": "Open the v3 document",
+          "url": "https://docs.google.com/document/d/1Dzo-PTHpFDbxTOmx1jDVx2bfnPKAOvu9OUGyNHo1MCc/edit"
+        }
       ]
     },
     "dman": {
@@ -250,7 +328,10 @@
       "summary": "The manifesto: six concrete roles libraries play in the AI age, and the invitation to library districts worldwide. Predates the v3 governance language and is due a refining pass.",
       "points": [],
       "links": [
-        { "label": "Open the manifesto", "url": "https://docs.google.com/document/d/1eZmScOFQOqCFZmH2qcWU0UBx00RgmP1yDzfyLPkzW80/edit" }
+        {
+          "label": "Open the manifesto",
+          "url": "https://docs.google.com/document/d/1eZmScOFQOqCFZmH2qcWU0UBx00RgmP1yDzfyLPkzW80/edit"
+        }
       ]
     },
     "dmiso": {
@@ -259,7 +340,10 @@
       "summary": "The full technical and philosophical account: the Acknowledgement of Country, the gift-and-interdependence Preamble, the MISO definition, attribution spectrum, crypto-native infrastructure, and the Commons registry.",
       "points": [],
       "links": [
-        { "label": "Open the MISO White Paper", "url": "https://docs.google.com/document/d/1wH-tsW23qB2aP99Dn2CFEAkXfEYBZ1Gv/edit?usp=sharing" }
+        {
+          "label": "Open the MISO White Paper",
+          "url": "https://docs.google.com/document/d/1wH-tsW23qB2aP99Dn2CFEAkXfEYBZ1Gv/edit?usp=sharing"
+        }
       ]
     },
     "dmcc": {
@@ -268,7 +352,10 @@
       "summary": "The Australian cooperative legal form that lets the commons raise growth capital without demutualisation — governance stays with members.",
       "points": [],
       "links": [
-        { "label": "Open the MCC document", "url": "https://docs.google.com/document/d/1nG0lo9_WeaA0lVEZNyuRbBQXnGZAqOc7RyoKYaRjn4w/edit" }
+        {
+          "label": "Open the MCC document",
+          "url": "https://docs.google.com/document/d/1nG0lo9_WeaA0lVEZNyuRbBQXnGZAqOc7RyoKYaRjn4w/edit"
+        }
       ]
     },
     "dsda": {
@@ -277,7 +364,10 @@
       "summary": "Personal AI devices owned, controlled, and upgraded by the individual — four owner-replaceable layers, with the personal archive sovereign and encrypted on a card the owner physically holds.",
       "points": [],
       "links": [
-        { "label": "Open the SDA document", "url": "https://docs.google.com/document/d/1vOmd86RFP1WeLdeM1NibW0zZaFfLPcDebrI446ElLpU/edit" }
+        {
+          "label": "Open the SDA document",
+          "url": "https://docs.google.com/document/d/1vOmd86RFP1WeLdeM1NibW0zZaFfLPcDebrI446ElLpU/edit"
+        }
       ]
     }
   }
